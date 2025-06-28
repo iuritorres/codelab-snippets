@@ -3,6 +3,7 @@
   "displayName": "codelab snippets",
   "description": "✨ Handy code snippets for fast and efficient TypeScript development",
   "publisher": "codelab",
+  "icon": "assets/icon.png",
   "author": {
     "name": "codelab",
     "email": "iuri.t1000@gmail.com",
@@ -27,7 +28,7 @@
     "props",
     "interface"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.101.0"
   },
