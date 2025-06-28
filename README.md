@@ -1,65 +1,113 @@
-# codelab-snippets README
+# ✨ Codelab Snippets
 
-This is the README for your extension "codelab-snippets". After writing up a brief description, we recommend including the following sections.
+Handy code snippets for fast and efficient TypeScript/React development. Boost your productivity with a comprehensive collection of React component snippets.
 
-## Features
+## 🚀 Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extension provides a wide range of React/TypeScript snippets that help you write components faster:
 
-For example if there is an image subfolder under your extension project workspace:
+### React Function Components
 
-\!\[feature X\]\(images/feature-x.png\)
+- `rfc` - React Function Component (basic)
+- `erfc` - Export React Function Component
+- `edrfc` - Export Default React Function Component
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### React Arrow Function Components
 
-## Requirements
+- `rafc` - React Arrow Function Component (basic)
+- `erafc` - Export React Arrow Function Component
+- `edrafc` - Export Default React Arrow Function Component
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Components with Props (TypeScript)
 
-## Extension Settings
+- `rfcp` - React Function Component with Props Interface
+- `erfcp` - Export React Function Component with Props
+- `edrfcp` - Export Default React Function Component with Props
+- `rafcp` - React Arrow Function Component with Props
+- `erafcp` - Export React Arrow Function Component with Props
+- `edrafcp` - Export Default React Arrow Function Component with Props
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Concise Components (Less Verbose)
 
-For example:
+- `rcp` - Function Component with Props (Concise)
+- `racp` - Arrow Component with Props (Concise)
+- `ercp` - Export Component with Props (Concise)
+- `ricp` - Inline Props Component (Super Concise)
 
-This extension contributes the following settings:
+### Props Interfaces
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `iprops` - Props Interface Definition
+- `tprops` - Type definition for Props
 
-## Known Issues
+## 📋 Requirements
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- VS Code 1.101.0 or higher
+- Works with JavaScript, TypeScript, JSX, and TSX files
 
-## Release Notes
+## ⚙️ Extension Settings
 
-Users appreciate release notes as you update your extension.
+This extension doesn't add any VS Code settings. Just install and start using the snippets!
 
-### 1.0.0
+## 💡 Usage Examples
 
-Initial release of ...
+### Basic Component
 
-### 1.0.1
+Type `rfc` and press Tab:
 
-Fixed issue #.
+```typescript
+function ComponentName () {
+  return (
 
-### 1.1.0
+  );
+};
+```
 
-Added features X, Y, and Z.
+### Component with Props (Concise)
+
+Type `ercp` and press Tab:
+
+```typescript
+interface ComponentProps {
+  prop: string;
+}
+
+export const Component = ({ prop }: ComponentProps) => <div></div>;
+```
+
+### Inline Component (Super Concise)
+
+Type `ricp` and press Tab:
+
+```typescript
+const Component = ({ prop }: { prop: string }) => <div></div>;
+```
+
+## 🎯 Tips
+
+- All snippets use placeholder variables - press Tab to navigate between them
+- Component names are automatically synced across interface and component definitions
+- Choose between verbose (full return blocks) and concise (inline JSX) variations based on your needs
+
+## 🐛 Known Issues
+
+No known issues at this time. Please report any problems on the GitHub repository.
+
+## 📝 Release Notes
+
+### 0.0.1
+
+Initial release with comprehensive React/TypeScript snippets:
+
+- Function and Arrow Function Components
+- Components with Props and TypeScript interfaces
+- Concise variations for faster coding
+- Export variations (default, named)
 
 ---
 
-## Working with Markdown
+## 🛠️ Development
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+This extension was built for the Codelab community to speed up React/TypeScript development.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Author**: [iuritorres](https://github.com/iuritorres)  
+**Email**: iuri.t1000@gmail.com
