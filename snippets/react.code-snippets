@@ -1,0 +1,231 @@
+{
+  // React Function Components
+  "React Function Component": {
+    "prefix": "rfc",
+    "description": "React Function Component without Export",
+    "body": [
+      "function ${1:ComponentName} () {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export React Function Component": {
+    "prefix": "erfc",
+    "description": "Export React Function Component",
+    "body": [
+      "export function ${1:ComponentName} () {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export Default React Function Component": {
+    "prefix": "edrfc",
+    "description": "Export Default React Function Component",
+    "body": [
+      "function ${1:ComponentName} () {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ]
+  },
+
+  // React Arrow Function Components
+  "rafc": {
+    "prefix": "rafc",
+    "description": "React Arrow Function Component without Export",
+    "body": [
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export React Arrow Function Component": {
+    "prefix": "erafc",
+    "description": "Export React Arrow Function Component",
+    "body": [
+      "export const ${1:ComponentName} = () => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export Default React Arrow Function Component": {
+    "prefix": "edrafc",
+    "description": "Export Default React Arrow Function Component",
+    "body": [
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ]
+  },
+
+  // React Components with Props
+  "React Function Component with Props": {
+    "prefix": "rfcp",
+    "description": "React Function Component with Props Interface",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ",
+      "}",
+      "",
+      "function ${1:ComponentName}({  }: ${1:ComponentName}Props) {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export React Function Component with Props": {
+    "prefix": "erfcp",
+    "description": "Export React Function Component with Props Interface",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ",
+      "}",
+      "",
+      "export function ${1:ComponentName}({  }: ${1:ComponentName}Props) {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export Default React Function Component with Props": {
+    "prefix": "edrfcp",
+    "description": "Export Default React Function Component with Props Interface",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ",
+      "}",
+      "",
+      "function ${1:ComponentName}({  }: ${1:ComponentName}Props) {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ]
+  },
+  "React Arrow Function Component with Props": {
+    "prefix": "rafcp",
+    "description": "React Arrow Function Component with Props Interface",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ",
+      "}",
+      "",
+      "const ${1:ComponentName} = ({  }: ${1:ComponentName}Props) => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export React Arrow Function Component with Props": {
+    "prefix": "erafcp",
+    "description": "Export React Arrow Function Component with Props Interface",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ",
+      "}",
+      "",
+      "export const ${1:ComponentName} = ({  }: ${1:ComponentName}Props) => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Export Default React Arrow Function Component with Props": {
+    "prefix": "edrafcp",
+    "description": "Export Default React Arrow Function Component with Props Interface",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ",
+      "}",
+      "",
+      "const ${1:ComponentName} = ({  }: ${1:ComponentName}Props) => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ]
+  },
+
+  // Concise React Components with Props
+  "Function Component with Props (Concise)": {
+    "prefix": "rcp",
+    "description": "React Component with Props (Concise)",
+    "body": [
+      "interface ${1:Component}Props {",
+      "  ${2:prop}: ${3:string};",
+      "}",
+      "",
+      "function ${1:Component}(props: ${1:Component}Props) {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};"
+    ]
+  },
+  "Arrow Component with Props (Concise)": {
+    "prefix": "racp",
+    "description": "React Arrow Component with Props (Concise)",
+    "body": [
+      "interface ${1:Component}Props {",
+      "  ${2:prop}: ${3:string};",
+      "}",
+      "",
+      "const ${1:Component} = (props: ${1:Component}Props) => <${4:div}>$0</${4:div}>;"
+    ]
+  },
+  "Export Component with Props (Concise)": {
+    "prefix": "ercp",
+    "description": "Export React Component with Props (Concise)",
+    "body": [
+      "interface ${1:Component}Props {",
+      "  ${2:prop}: ${3:string};",
+      "}",
+      "",
+      "export const ${1:Component} = ({ ${2:prop} }: ${1:Component}Props) => (",
+      "  <${4:div}>$0</${4:div}>",
+      ");"
+    ]
+  },
+
+  // Quick Props Interface
+  "Props Interface": {
+    "prefix": "iprops",
+    "description": "Props Interface Definition",
+    "body": ["interface ${1:ComponentName}Props {", "  $0", "}"]
+  },
+  "Type Props": {
+    "prefix": "tprops",
+    "description": "Type definition for Props",
+    "body": ["type ${1:ComponentName}Props = {", "  $0", "};"]
+  },
+  "Inline Props Component": {
+    "prefix": "ricp",
+    "description": "React Inline Component with Props",
+    "body": [
+      "const ${1:Component} = ({ ${2:prop} }: { ${2:prop}: ${3:string} }) => <${4:div}>$0</${4:div}>;"
+    ]
+  }
+}

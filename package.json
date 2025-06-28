@@ -2,6 +2,11 @@
   "name": "codelab-snippets",
   "displayName": "codelab snippets",
   "description": "✨ Handy code snippets for fast and efficient TypeScript development",
+  "author": {
+    "name": "codelab",
+    "email": "iuri.t1000@gmail.com",
+    "url": "https://github.com/iuritorres"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.101.0"
@@ -12,8 +17,20 @@
   "contributes": {
     "snippets": [
       {
+        "language": "javascript",
+        "path": "./snippets/react.code-snippets"
+      },
+      {
         "language": "typescript",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/react.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.code-snippets"
       }
     ]
   }
