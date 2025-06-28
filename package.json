@@ -2,6 +2,7 @@
   "name": "codelab-snippets",
   "displayName": "codelab snippets",
   "description": "✨ Handy code snippets for fast and efficient TypeScript development",
+  "publisher": "codelab",
   "author": {
     "name": "codelab",
     "email": "iuri.t1000@gmail.com",
