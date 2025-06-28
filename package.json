@@ -7,6 +7,25 @@
     "email": "iuri.t1000@gmail.com",
     "url": "https://github.com/iuritorres"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iuritorres/codelab-snippets.git"
+  },
+  "homepage": "https://github.com/iuritorres/codelab-snippets",
+  "bugs": {
+    "url": "https://github.com/iuritorres/codelab-snippets/issues"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "javascript",
+    "snippets",
+    "components",
+    "tsx",
+    "jsx",
+    "props",
+    "interface"
+  ],
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.101.0"
