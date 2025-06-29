@@ -1,9 +1,29 @@
 {
   "name": "codelab-snippets",
   "displayName": "codelab snippets",
-  "description": "✨ Handy code snippets for fast and efficient TypeScript development",
+  "description": "✨ Handy code snippets for fast and efficient development",
+  "version": "0.0.3",
   "publisher": "codelab",
+  "license": "MIT",
   "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "react",
+    "nextjs",
+    "typescript",
+    "javascript",
+    "snippets",
+    "components",
+    "tsx",
+    "jsx",
+    "props",
+    "interface"
+  ],
   "author": {
     "name": "codelab",
     "email": "iuri.t1000@gmail.com",
@@ -17,24 +37,6 @@
   "bugs": {
     "url": "https://github.com/iuritorres/codelab-snippets/issues"
   },
-  "keywords": [
-    "react",
-    "typescript",
-    "javascript",
-    "snippets",
-    "components",
-    "tsx",
-    "jsx",
-    "props",
-    "interface"
-  ],
-  "version": "0.0.2",
-  "engines": {
-    "vscode": "^1.101.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
   "contributes": {
     "snippets": [
       {
