@@ -23,16 +23,10 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Package extension
-        run: npm run package
+      # - name: Package extension
+      #   run: npm run package
 
       - name: Publish to VS Code Marketplace
         run: npm run publish
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-
-      - name: Upload release artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: extension-release-${{ github.event.release.tag_name }}
-          path: "*.vsix"

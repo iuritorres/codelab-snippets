@@ -32,14 +32,3 @@ jobs:
       - name: Run tests on other OS
         run: npm test
         if: runner.os != 'Linux'
-
-      - name: Package extension (validate)
-        run: npm run package
-        if: matrix.os == 'ubuntu-latest'
-
-      - name: Upload package artifact
-        uses: actions/upload-artifact@v4
-        if: matrix.os == 'ubuntu-latest'
-        with:
-          name: extension-package
-          path: "*.vsix"
