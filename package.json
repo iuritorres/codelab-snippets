@@ -2,7 +2,7 @@
   "name": "codelab-snippets",
   "displayName": "codelab snippets",
   "description": "✨ Handy code snippets for fast and efficient development",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "codelab",
   "license": "MIT",
   "icon": "assets/icon.png",
@@ -38,7 +38,7 @@
     "url": "https://github.com/iuritorres/codelab-snippets/issues"
   },
   "scripts": {
-    "publish": "vsce publish --yarn",
+    "publish": "vsce publish",
     "test": "echo 'No tests configured'"
   },
   "contributes": {
