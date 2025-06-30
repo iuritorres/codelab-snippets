@@ -109,5 +109,4 @@ Initial release with comprehensive React/TypeScript snippets:
 
 This extension was built for the Codelab community to speed up React/TypeScript development.
 
-**Author**: [iuritorres](https://github.com/iuritorres)  
-**Email**: iuri.t1000@gmail.com
+**Author**: [iuritorres](https://github.com/iuritorres)
