@@ -38,7 +38,7 @@
     "url": "https://github.com/iuritorres/codelab-snippets/issues"
   },
   "scripts": {
-    "deploy": "vsce publish --npm",
+    "publish": "vsce publish --npm",
     "test": "echo 'No tests configured'"
   },
   "contributes": {

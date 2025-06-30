@@ -1,44 +1,12 @@
 name: Publish Extension
 
 on:
-  push:
-    branches:
-      - main
   release:
-    types:
-      - created
+    types: [created]
 
 jobs:
-  build-and-test:
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18.x
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Test on Linux
-        run: xvfb-run -a npm test
-        if: runner.os == 'Linux'
-
-      - name: Test on other OS
-        run: npm test
-        if: runner.os != 'Linux'
-
   publish:
-    needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.event_name == 'release'
 
     steps:
       - name: Checkout
@@ -51,8 +19,20 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Package extension
+        run: npm run package
 
       - name: Publish to VS Code Marketplace
         run: npm run publish
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-release-${{ github.event.release.tag_name }}
+          path: "*.vsix"
