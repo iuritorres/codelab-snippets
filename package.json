@@ -37,6 +37,10 @@
   "bugs": {
     "url": "https://github.com/iuritorres/codelab-snippets/issues"
   },
+  "scripts": {
+    "deploy": "vsce publish --npm",
+    "test": "echo 'No tests configured'"
+  },
   "contributes": {
     "snippets": [
       {
@@ -56,5 +60,8 @@
         "path": "./snippets/react.code-snippets"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
   }
 }
