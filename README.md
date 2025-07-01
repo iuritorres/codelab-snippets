@@ -1,43 +1,148 @@
 # ✨ Codelab Snippets
 
-Handy code snippets for fast and efficient TypeScript/React development. Boost your productivity with a comprehensive collection of React component snippets.
+Handy code snippets for fast and efficient TypeScript/React development. Boost your productivity with a comprehensive collection of React components, hooks, and JavaScript ES6+ snippets.
 
 ## 🚀 Features
 
-This extension provides a wide range of React/TypeScript snippets that help you write components faster:
+This extension provides a wide range of React/TypeScript and JavaScript snippets that help you write code faster:
 
 ### React Function Components
 
-- `rfc` - React Function Component (basic)
-- `erfc` - Export React Function Component
-- `edrfc` - Export Default React Function Component
+| Prefix  | Description                             |
+| ------- | --------------------------------------- |
+| `rfc`   | React Function Component (basic)        |
+| `erfc`  | Export React Function Component         |
+| `edrfc` | Export Default React Function Component |
 
 ### React Arrow Function Components
 
-- `rafc` - React Arrow Function Component (basic)
-- `erafc` - Export React Arrow Function Component
-- `edrafc` - Export Default React Arrow Function Component
+| Prefix   | Description                                   |
+| -------- | --------------------------------------------- |
+| `rafc`   | React Arrow Function Component (basic)        |
+| `erafc`  | Export React Arrow Function Component         |
+| `edrafc` | Export Default React Arrow Function Component |
 
 ### Components with Props (TypeScript)
 
-- `rfcp` - React Function Component with Props Interface
-- `erfcp` - Export React Function Component with Props
-- `edrfcp` - Export Default React Function Component with Props
-- `rafcp` - React Arrow Function Component with Props
-- `erafcp` - Export React Arrow Function Component with Props
-- `edrafcp` - Export Default React Arrow Function Component with Props
+| Prefix    | Description                                              |
+| --------- | -------------------------------------------------------- |
+| `rfcp`    | React Function Component with Props Interface            |
+| `erfcp`   | Export React Function Component with Props               |
+| `edrfcp`  | Export Default React Function Component with Props       |
+| `rafcp`   | React Arrow Function Component with Props                |
+| `erafcp`  | Export React Arrow Function Component with Props         |
+| `edrafcp` | Export Default React Arrow Function Component with Props |
 
 ### Concise Components (Less Verbose)
 
-- `rcp` - Function Component with Props (Concise)
-- `racp` - Arrow Component with Props (Concise)
-- `ercp` - Export Component with Props (Concise)
-- `ricp` - Inline Props Component (Super Concise)
+| Prefix | Description                             |
+| ------ | --------------------------------------- |
+| `rcp`  | Function Component with Props (Concise) |
+| `racp` | Arrow Component with Props (Concise)    |
+| `ercp` | Export Component with Props (Concise)   |
+| `ricp` | Inline Props Component (Super Concise)  |
 
 ### Props Interfaces
 
-- `iprops` - Props Interface Definition
-- `tprops` - Type definition for Props
+| Prefix   | Description                |
+| -------- | -------------------------- |
+| `iprops` | Props Interface Definition |
+| `tprops` | Type definition for Props  |
+
+### React Hooks
+
+| Prefix       | Description                      |
+| ------------ | -------------------------------- |
+| `state`      | useState Hook                    |
+| `effect`     | useEffect Hook                   |
+| `effectd`    | useEffect Hook with Dependencies |
+| `effectc`    | useEffect Hook with Cleanup      |
+| `context`    | useContext Hook                  |
+| `reducer`    | useReducer Hook                  |
+| `memo`       | useMemo Hook                     |
+| `callback`   | useCallback Hook                 |
+| `ref`        | useRef Hook                      |
+| `leffect`    | useLayoutEffect Hook             |
+| `imperative` | useImperativeHandle Hook         |
+| `usedebug`   | useDebugValue Hook               |
+
+### Custom Hooks & Patterns
+
+| Prefix     | Description                    |
+| ---------- | ------------------------------ |
+| `hook`     | Custom Hook Template           |
+| `hookr`    | Custom Hook with Return Object |
+| `statets`  | useState with TypeScript       |
+| `effecta`  | useEffect with Async Pattern   |
+| `formhook` | Form Hook Pattern              |
+
+### JavaScript ES6+ Features
+
+| Prefix | Description             |
+| ------ | ----------------------- |
+| `af`   | Arrow Function          |
+| `afi`  | Arrow Function (Inline) |
+| `aaf`  | Async Arrow Function    |
+| `asf`  | Async Function          |
+| `co`   | Const Declaration       |
+| `le`   | Let Declaration         |
+
+### Destructuring
+
+| Prefix  | Description                    |
+| ------- | ------------------------------ |
+| `dob`   | Destructure Object             |
+| `dar`   | Destructure Array              |
+| `drest` | Destructure with Rest Operator |
+
+### Array Methods
+
+| Prefix    | Description          |
+| --------- | -------------------- |
+| `map`     | Array Map Method     |
+| `filter`  | Array Filter Method  |
+| `reduce`  | Array Reduce Method  |
+| `find`    | Array Find Method    |
+| `foreach` | Array ForEach Method |
+
+### Import/Export
+
+| Prefix | Description    |
+| ------ | -------------- |
+| `imp`  | Import Default |
+| `imn`  | Import Named   |
+| `ima`  | Import All as  |
+| `exp`  | Export Default |
+| `exn`  | Export Named   |
+
+### Promises & Async
+
+| Prefix | Description     |
+| ------ | --------------- |
+| `prom` | Promise         |
+| `tca`  | Try Catch Async |
+
+### Console & Debugging
+
+| Prefix    | Description    |
+| --------- | -------------- |
+| `cl`      | Console Log    |
+| `cw`      | Console Warn   |
+| `ce`      | Console Error  |
+| `ctable`  | Console Table  |
+| `cclear`  | Console Clear  |
+| `cassert` | Console Assert |
+| `ctime`   | Console Time   |
+| `cgroup`  | Console Group  |
+
+### Utilities
+
+| Prefix     | Description      |
+| ---------- | ---------------- |
+| `tl`       | Template Literal |
+| `okeys`    | Object.keys()    |
+| `ovalues`  | Object.values()  |
+| `oentries` | Object.entries() |
 
 ## 📋 Requirements
 
@@ -74,19 +179,47 @@ interface ComponentProps {
 export const Component = ({ prop }: ComponentProps) => <div></div>;
 ```
 
-### Inline Component (Super Concise)
+### useState Hook
 
-Type `ricp` and press Tab:
+Type `state` and press Tab:
 
 ```typescript
-const Component = ({ prop }: { prop: string }) => <div></div>;
+const [count, setCount] = useState(0);
+```
+
+### useEffect with Async
+
+Type `effecta` and press Tab:
+
+```typescript
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchData();
+}, [dependencies]);
+```
+
+### Arrow Function
+
+Type `af` and press Tab:
+
+```typescript
+const functionName = (params) => {};
 ```
 
 ## 🎯 Tips
 
 - All snippets use placeholder variables - press Tab to navigate between them
 - Component names are automatically synced across interface and component definitions
+- Hook snippets include proper TypeScript support and common patterns
 - Choose between verbose (full return blocks) and concise (inline JSX) variations based on your needs
+- Use JavaScript ES6+ snippets for modern JavaScript development
+- Console snippets help with debugging and performance monitoring
 
 ## 🐛 Known Issues
 
