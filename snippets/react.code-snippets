@@ -227,5 +227,167 @@
     "body": [
       "const ${1:Component} = ({ ${2:prop} }: { ${2:prop}: ${3:string} }) => <${4:div}>$0</${4:div}>;"
     ]
+  },
+
+  // React Hooks
+  "useState Hook": {
+    "prefix": "state",
+    "description": "useState Hook",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialValue});"
+    ]
+  },
+  "useEffect Hook": {
+    "prefix": "effect",
+    "description": "useEffect Hook",
+    "body": ["useEffect(() => {", "  $0", "}, []);"]
+  },
+  "useEffect with Dependencies": {
+    "prefix": "effectd",
+    "description": "useEffect Hook with Dependencies",
+    "body": ["useEffect(() => {", "  $0", "}, [${1:dependencies}]);"]
+  },
+  "useEffect with Cleanup": {
+    "prefix": "effectc",
+    "description": "useEffect Hook with Cleanup",
+    "body": [
+      "useEffect(() => {",
+      "  $0",
+      "  ",
+      "  return () => {",
+      "    ${1:// cleanup}",
+      "  };",
+      "}, []);"
+    ]
+  },
+  "useContext Hook": {
+    "prefix": "context",
+    "description": "useContext Hook",
+    "body": ["const ${1:value} = useContext(${2:Context});"]
+  },
+  "useReducer Hook": {
+    "prefix": "reducer",
+    "description": "useReducer Hook",
+    "body": [
+      "const [${1:state}, ${2:dispatch}] = useReducer(${3:reducer}, ${4:initialState});"
+    ]
+  },
+  "useMemo Hook": {
+    "prefix": "memo",
+    "description": "useMemo Hook",
+    "body": [
+      "const ${1:memoizedValue} = useMemo(() => {",
+      "  return ${2:computation};",
+      "}, [${3:dependencies}]);"
+    ]
+  },
+  "useCallback Hook": {
+    "prefix": "callback",
+    "description": "useCallback Hook",
+    "body": [
+      "const ${1:memoizedCallback} = useCallback(",
+      "  (${2:params}) => {",
+      "    $0",
+      "  },",
+      "  [${3:dependencies}]",
+      ");"
+    ]
+  },
+  "useRef Hook": {
+    "prefix": "ref",
+    "description": "useRef Hook",
+    "body": ["const ${1:ref} = useRef${2:<${3:HTMLDivElement}>}(${4:null});"]
+  },
+  "useLayoutEffect Hook": {
+    "prefix": "leffect",
+    "description": "useLayoutEffect Hook",
+    "body": ["useLayoutEffect(() => {", "  $0", "}, [${1:dependencies}]);"]
+  },
+  "useImperativeHandle Hook": {
+    "prefix": "imperative",
+    "description": "useImperativeHandle Hook",
+    "body": [
+      "useImperativeHandle(${1:ref}, () => ({",
+      "  $0",
+      "}), [${2:dependencies}]);"
+    ]
+  },
+  "useDebugValue Hook": {
+    "prefix": "usedebug",
+    "description": "useDebugValue Hook",
+    "body": ["useDebugValue(${1:value});"]
+  },
+
+  // Custom Hooks
+  "Custom Hook": {
+    "prefix": "hook",
+    "description": "Custom Hook Template",
+    "body": [
+      "function use${1:CustomHook}(${2:params}) {",
+      "  const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = useState(${4:initialValue});",
+      "  ",
+      "  useEffect(() => {",
+      "    $0",
+      "  }, [${2:params}]);",
+      "  ",
+      "  return { ${3:state}, set${3/(.*)/${1:/capitalize}/} };",
+      "}"
+    ]
+  },
+  "Custom Hook with Return Object": {
+    "prefix": "hookr",
+    "description": "Custom Hook with Return Object",
+    "body": [
+      "function use${1:CustomHook}(${2:params}) {",
+      "  $0",
+      "  ",
+      "  return {",
+      "    ${3:// return values}",
+      "  };",
+      "}"
+    ]
+  },
+
+  // Hook Patterns
+  "useState with TypeScript": {
+    "prefix": "statets",
+    "description": "useState with TypeScript Interface",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:Type}>(${3:initialValue});"
+    ]
+  },
+  "useEffect Async Pattern": {
+    "prefix": "effecta",
+    "description": "useEffect with Async Function",
+    "body": [
+      "useEffect(() => {",
+      "  const ${1:fetchData} = async () => {",
+      "    try {",
+      "      $0",
+      "    } catch (error) {",
+      "      console.error(error);",
+      "    }",
+      "  };",
+      "  ",
+      "  ${1:fetchData}();",
+      "}, [${2:dependencies}]);"
+    ]
+  },
+  "Form Hook Pattern": {
+    "prefix": "formhook",
+    "description": "Form Hook Pattern",
+    "body": [
+      "const [${1:formData}, set${1/(.*)/${1:/capitalize}/}] = useState({",
+      "  ${2:field}: '${3:value}',",
+      "});",
+      "",
+      "const handle${4:Change} = (e: React.ChangeEvent<HTMLInputElement>) => {",
+      "  const { name, value } = e.target;",
+      "  set${1/(.*)/${1:/capitalize}/}(prev => ({",
+      "    ...prev,",
+      "    [name]: value",
+      "  }));",
+      "};"
+    ]
   }
 }

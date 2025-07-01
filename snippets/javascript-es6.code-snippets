@@ -169,8 +169,32 @@
     "body": ["console.error($0);"]
   },
   "Console Table": {
-    "prefix": "ct",
+    "prefix": "ctable",
     "description": "Console Table",
     "body": ["console.table($0);"]
+  },
+  "Console Clear": {
+    "prefix": "cclear",
+    "description": "Console Clear",
+    "body": ["console.clear();"]
+  },
+  "Console Assert": {
+    "prefix": "cassert",
+    "description": "Console Assert",
+    "body": ["console.assert(${1:condition}, '${2:message}');"]
+  },
+  "Console Time": {
+    "prefix": "ctime",
+    "description": "Console Time",
+    "body": [
+      "console.time('${1:label}');",
+      "$0",
+      "console.timeEnd('${1:label}');"
+    ]
+  },
+  "Console Group": {
+    "prefix": "cgroup",
+    "description": "Console Group",
+    "body": ["console.group('${1:label}');", "$0", "console.groupEnd();"]
   }
 }
