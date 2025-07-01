@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vue.js snippets support
 - Next.js specific snippets
 
-## [0.0.6] - 2025-06-30
+## [0.0.6] - 2025-06-30 - "🎣 Hooks & ES6+ Collection"
 
 ### Added
 
