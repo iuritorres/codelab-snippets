@@ -45,7 +45,15 @@
     "snippets": [
       {
         "language": "javascript",
+        "path": "./snippets/javascript-es6.code-snippets"
+      },
+      {
+        "language": "javascript",
         "path": "./snippets/react.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/javascript-es6.code-snippets"
       },
       {
         "language": "typescript",
@@ -53,7 +61,15 @@
       },
       {
         "language": "javascriptreact",
+        "path": "./snippets/javascript-es6.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
         "path": "./snippets/react.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/javascript-es6.code-snippets"
       },
       {
         "language": "typescriptreact",

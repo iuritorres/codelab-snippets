@@ -1,0 +1,176 @@
+{
+  // ES6+ Functions
+  "Arrow Function": {
+    "prefix": "af",
+    "description": "Arrow Function",
+    "body": ["const ${1:functionName} = (${2:params}) => {", "  $0", "};"]
+  },
+  "Arrow Function (Inline)": {
+    "prefix": "afi",
+    "description": "Arrow Function Inline",
+    "body": ["const ${1:functionName} = (${2:params}) => $0;"]
+  },
+  "Async Arrow Function": {
+    "prefix": "aaf",
+    "description": "Async Arrow Function",
+    "body": ["const ${1:functionName} = async (${2:params}) => {", "  $0", "};"]
+  },
+
+  // ES6+ Variables
+  "Const Declaration": {
+    "prefix": "co",
+    "description": "Const Declaration",
+    "body": ["const ${1:name} = $0;"]
+  },
+  "Let Declaration": {
+    "prefix": "le",
+    "description": "Let Declaration",
+    "body": ["let ${1:name} = $0;"]
+  },
+
+  // Destructuring
+  "Destructure Object": {
+    "prefix": "dob",
+    "description": "Destructure Object",
+    "body": ["const { ${1:property} } = ${2:object};"]
+  },
+  "Destructure Array": {
+    "prefix": "dar",
+    "description": "Destructure Array",
+    "body": ["const [${1:element}] = ${2:array};"]
+  },
+  "Destructure with Rest": {
+    "prefix": "drest",
+    "description": "Destructure with Rest Operator",
+    "body": ["const { ${1:first}, ...${2:rest} } = ${3:object};"]
+  },
+
+  // Template Literals
+  "Template Literal": {
+    "prefix": "tl",
+    "description": "Template Literal",
+    "body": ["`${1:string} \\${${2:expression}} ${3:string}`$0"]
+  },
+
+  // Promises and Async/Await
+  "Promise": {
+    "prefix": "prom",
+    "description": "Promise",
+    "body": ["new Promise((resolve, reject) => {", "  $0", "});"]
+  },
+  "Async Function": {
+    "prefix": "asf",
+    "description": "Async Function",
+    "body": ["async function ${1:functionName}(${2:params}) {", "  $0", "}"]
+  },
+  "Try Catch Async": {
+    "prefix": "tca",
+    "description": "Try Catch for Async",
+    "body": [
+      "try {",
+      "  const ${1:result} = await ${2:asyncFunction}();",
+      "  $0",
+      "} catch (error) {",
+      "  console.error(error);",
+      "}"
+    ]
+  },
+
+  // Array Methods
+  "Array Map": {
+    "prefix": "map",
+    "description": "Array Map Method",
+    "body": ["${1:array}.map((${2:item}) => ${3:item})"]
+  },
+  "Array Filter": {
+    "prefix": "filter",
+    "description": "Array Filter Method",
+    "body": ["${1:array}.filter((${2:item}) => ${3:condition})"]
+  },
+  "Array Reduce": {
+    "prefix": "reduce",
+    "description": "Array Reduce Method",
+    "body": [
+      "${1:array}.reduce((${2:acc}, ${3:item}) => {",
+      "  $0",
+      "  return ${2:acc};",
+      "}, ${4:initialValue})"
+    ]
+  },
+  "Array Find": {
+    "prefix": "find",
+    "description": "Array Find Method",
+    "body": ["${1:array}.find((${2:item}) => ${3:condition})"]
+  },
+  "Array ForEach": {
+    "prefix": "foreach",
+    "description": "Array ForEach Method",
+    "body": ["${1:array}.forEach((${2:item}) => {", "  $0", "});"]
+  },
+
+  // Object Methods
+  "Object Keys": {
+    "prefix": "okeys",
+    "description": "Object.keys()",
+    "body": ["Object.keys(${1:object})"]
+  },
+  "Object Values": {
+    "prefix": "ovalues",
+    "description": "Object.values()",
+    "body": ["Object.values(${1:object})"]
+  },
+  "Object Entries": {
+    "prefix": "oentries",
+    "description": "Object.entries()",
+    "body": ["Object.entries(${1:object})"]
+  },
+
+  // Import/Export
+  "Import Default": {
+    "prefix": "imp",
+    "description": "Import Default",
+    "body": ["import ${1:name} from '${2:module}';"]
+  },
+  "Import Named": {
+    "prefix": "imn",
+    "description": "Import Named",
+    "body": ["import { ${1:name} } from '${2:module}';"]
+  },
+  "Import All": {
+    "prefix": "ima",
+    "description": "Import All as",
+    "body": ["import * as ${1:name} from '${2:module}';"]
+  },
+  "Export Default": {
+    "prefix": "exp",
+    "description": "Export Default",
+    "body": ["export default ${1:name};"]
+  },
+  "Export Named": {
+    "prefix": "exn",
+    "description": "Export Named",
+    "body": ["export { ${1:name} };"]
+  },
+
+  // Console
+  "Console Log": {
+    "prefix": "cl",
+    "description": "Console Log",
+    "body": ["console.log($0);"]
+  },
+  "Console Warn": {
+    "prefix": "cw",
+    "description": "Console Warn",
+    "body": ["console.warn($0);"]
+  },
+  "Console Error": {
+    "prefix": "ce",
+    "description": "Console Error",
+    "body": ["console.error($0);"]
+  },
+  "Console Table": {
+    "prefix": "ct",
+    "description": "Console Table",
+    "body": ["console.table($0);"]
+  }
+}
