@@ -200,6 +200,7 @@
   "Class Definition": {
     "prefix": "class",
     "description": "Class Definition",
+    "isFileTemplate": true,
     "body": [
       "class ${1/(.*)/${1:/capitalize}/}:",
       "    def __init__(self, ${2:args}) -> None:",
@@ -211,6 +212,7 @@
   "Data Class Definition": {
     "prefix": "dataclass",
     "description": "Data Class Definition",
+    "isFileTemplate": true,
     "body": [
       "from dataclasses import dataclass",
       "",
@@ -322,6 +324,7 @@
   "Terminal Colors Utility": {
     "prefix": "utils:terminalcolors",
     "description": "Complete terminal color utilities module",
+    "isFileTemplate": true,
     "body": [
       "\"\"\"",
       "Terminal Color Utilities",
