@@ -101,7 +101,7 @@ console.log("📊 MINIFICATION SUMMARY");
 console.log("=".repeat(60), "\n");
 console.log(`📁 Files processed: ${files.length}`);
 console.log(`📏 Original total size: ${formatBytes(totalOriginalSize)} KB`);
-console.log(`🗜️  Minified total size: ${formatBytes(totalMinifiedSize)} KB`);
+console.log(`🗜️ Minified total size: ${formatBytes(totalMinifiedSize)} KB`);
 console.log(
   `💾 Total memory saved: ${formatBytes(
     totalSavedBytes
