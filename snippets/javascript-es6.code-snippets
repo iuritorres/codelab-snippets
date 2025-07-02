@@ -64,11 +64,11 @@
     "body": ["async function ${1:functionName}(${2:params}) {", "  $0", "}"]
   },
   "Try Catch Async": {
-    "prefix": "tca",
+    "prefix": "trycatch",
     "description": "Try Catch for Async",
     "body": [
       "try {",
-      "  const ${1:result} = await ${2:asyncFunction}();",
+      "  ${1:code}",
       "  $0",
       "} catch (error) {",
       "  console.error(error);",

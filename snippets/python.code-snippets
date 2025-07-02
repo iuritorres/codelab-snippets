@@ -1,0 +1,548 @@
+{
+  "Main Boilerplate": {
+    "prefix": "main",
+    "body": ["if __name__ == '__main__':", "    ${0}", ""],
+    "description": "Main boilerplate for Python scripts"
+  },
+  "Import Default": {
+    "prefix": "imp",
+    "description": "Import Default",
+    "body": ["from ${1:module} import ${2:name}"]
+  },
+  "Import All": {
+    "prefix": "ima",
+    "description": "Import All as",
+    "body": ["import ${1:module} as ${2:name}"]
+  },
+  "Decorator Method": {
+    "prefix": "decorator",
+    "description": "Decorator Method",
+    "body": [
+      "def ${1:decorator_name}(func):",
+      "    def wrapper(${2:*args}, ${3:**kwargs}):",
+      "        ${4:pass}",
+      "",
+      "        return func(${2:*args}, ${3:**kwargs})",
+      "",
+      "    return wrapper",
+      "",
+      "${0}"
+    ]
+  },
+
+  // Dictionary Methods (equivalent to Object methods)
+  "Dictionary Keys": {
+    "prefix": "dkeys",
+    "description": "dict.keys()",
+    "body": ["${1:dictionary}.keys()"]
+  },
+  "Dictionary Values": {
+    "prefix": "dvalues",
+    "description": "dict.values()",
+    "body": ["${1:dictionary}.values()"]
+  },
+  "Dictionary Items": {
+    "prefix": "ditems",
+    "description": "dict.items()",
+    "body": ["${1:dictionary}.items()"]
+  },
+  "List Dictionary Keys": {
+    "prefix": "lkeys",
+    "description": "List of dictionary keys",
+    "body": ["list(${1:dictionary}.keys())"]
+  },
+  "List Dictionary Values": {
+    "prefix": "lvalues",
+    "description": "List of dictionary values",
+    "body": ["list(${1:dictionary}.values())"]
+  },
+  "List Dictionary Items": {
+    "prefix": "litems",
+    "description": "List of dictionary items",
+    "body": ["list(${1:dictionary}.items())"]
+  },
+
+  // Array/List Methods
+  "List Comprehension": {
+    "prefix": "lc",
+    "description": "List Comprehension",
+    "body": ["[${1:expression} for ${2:item} in ${3:iterable}]"]
+  },
+  "List Comprehension with Condition": {
+    "prefix": "lcif",
+    "description": "List Comprehension with Condition",
+    "body": [
+      "[${1:expression} for ${2:item} in ${3:iterable} if ${4:condition}]"
+    ]
+  },
+  "Map Function": {
+    "prefix": "map",
+    "description": "Map function",
+    "body": ["list(map(${1:function}, ${2:iterable}))"]
+  },
+  "Filter Function": {
+    "prefix": "filter",
+    "description": "Filter function",
+    "body": ["list(filter(${1:function}, ${2:iterable}))"]
+  },
+  "Lambda Map": {
+    "prefix": "lmap",
+    "description": "Lambda with Map",
+    "body": ["list(map(lambda ${1:x}: ${2:expression}, ${3:iterable}))"]
+  },
+  "Lambda Filter": {
+    "prefix": "lfilter",
+    "description": "Lambda with Filter",
+    "body": ["list(filter(lambda ${1:x}: ${2:condition}, ${3:iterable}))"]
+  },
+  "Reduce Function": {
+    "prefix": "reduce",
+    "description": "Reduce function (functools)",
+    "body": [
+      "from functools import reduce",
+      "",
+      "",
+      "reduce(lambda ${1:acc}, ${2:item}: ${3:expression}, ${4:iterable})"
+    ]
+  },
+  "List Sort": {
+    "prefix": "sort",
+    "description": "Sort list",
+    "body": ["${1:list}.sort(key=lambda ${2:x}: ${3:x})"]
+  },
+  "Sorted Function": {
+    "prefix": "sorted",
+    "description": "Sorted function",
+    "body": ["sorted(${1:iterable}, key=lambda ${2:x}: ${3:x})"]
+  },
+  "For Loop": {
+    "prefix": "forin",
+    "description": "For Loop",
+    "body": ["for ${1:item} in ${2:iterable}:", "    $0"]
+  },
+  "For Loop With Enumarate": {
+    "prefix": "forenum",
+    "description": "Enumerate",
+    "body": [
+      "for ${1:index}, ${2:value} in enumerate(${3:iterable}):",
+      "    $0"
+    ]
+  },
+  "For Loope With Zip Function": {
+    "prefix": "forzip",
+    "description": "Zip function",
+    "body": [
+      "for ${1:item1}, ${2:item2} in zip(${3:iterable1}, ${4:iterable2}):",
+      "    $0"
+    ]
+  },
+  "For Loop With Range Function": {
+    "prefix": "forrange",
+    "description": "Range function",
+    "body": ["for ${1:i} in range(${2:start}, ${3:end}, ${4:step}):", "    $0"]
+  },
+  "Any Function": {
+    "prefix": "any",
+    "description": "Any function",
+    "body": ["any(${1:condition} for ${2:item} in ${3:iterable})"]
+  },
+  "All Function": {
+    "prefix": "all",
+    "description": "All function",
+    "body": ["all(${1:condition} for ${2:item} in ${3:iterable})"]
+  },
+  "List Append": {
+    "prefix": "append",
+    "description": "List append",
+    "body": ["${1:list}.append(${2:item})"]
+  },
+  "List Extend": {
+    "prefix": "extend",
+    "description": "List extend",
+    "body": ["${1:list}.extend(${2:iterable})"]
+  },
+  "List Remove": {
+    "prefix": "remove",
+    "description": "List remove",
+    "body": ["${1:list}.remove(${2:item})"]
+  },
+  "List Pop": {
+    "prefix": "pop",
+    "description": "List pop",
+    "body": ["${1:list}.pop(${2:index})"]
+  },
+  "List Index": {
+    "prefix": "index",
+    "description": "List index",
+    "body": ["${1:list}.index(${2:item})"]
+  },
+  "List Count": {
+    "prefix": "count",
+    "description": "List count",
+    "body": ["${1:list}.count(${2:item})"]
+  },
+
+  // Dictionary Comprehension
+  "Dictionary Comprehension": {
+    "prefix": "dc",
+    "description": "Dictionary Comprehension",
+    "body": ["{${1:key}: ${2:value} for ${3:item} in ${4:iterable}}"]
+  },
+  "Dictionary Comprehension with Condition": {
+    "prefix": "dcif",
+    "description": "Dictionary Comprehension with Condition",
+    "body": [
+      "{${1:key}: ${2:value} for ${3:item} in ${4:iterable} if ${5:condition}}"
+    ]
+  },
+
+  // Class and Method Definitions
+  "Class Definition": {
+    "prefix": "class",
+    "description": "Class Definition",
+    "body": [
+      "class ${1/(.*)/${1:/capitalize}/}:",
+      "    def __init__(self, ${2:args}) -> None:",
+      "        ${3:pass}",
+      "",
+      "    ${0}"
+    ]
+  },
+  "Data Class Definition": {
+    "prefix": "dataclass",
+    "description": "Data Class Definition",
+    "body": [
+      "from dataclasses import dataclass",
+      "",
+      "",
+      "@dataclass",
+      "class ${1/(.*)/${1:/capitalize}/}:",
+      "    ${2:field1}: ${3:type}",
+      "    ${5:field2}: ${6:type}",
+      "    ${0}"
+    ]
+  },
+  "Constructor Method": {
+    "prefix": "init",
+    "description": "Constructor Method",
+    "body": [
+      "def __init__(self, ${1:args}) -> None:",
+      "    ${2:pass}",
+      "",
+      "${0}"
+    ]
+  },
+  "String Representation Method": {
+    "prefix": "str",
+    "description": "String Representation Method",
+    "body": [
+      "def __str__(self) -> str:",
+      "    return f\"${1/(.*)/${1:/capitalize}/}(${2:attributes})\"",
+      "",
+      "${0}"
+    ]
+  },
+  "Static Method": {
+    "prefix": "staticmethod",
+    "description": "Static Method",
+    "body": [
+      "@staticmethod",
+      "def ${1:method_name}(${2:args}):",
+      "    ${3:pass}",
+      "",
+      "${0}"
+    ]
+  },
+  "Class Method": {
+    "prefix": "classmethod",
+    "description": "Class Method",
+    "body": [
+      "@classmethod",
+      "def ${1:method_name}(cls, ${2:args}):",
+      "    ${3:pass}",
+      "",
+      "${0}"
+    ]
+  },
+  "Property Method": {
+    "prefix": "property",
+    "description": "Property Method",
+    "body": [
+      "@property",
+      "def ${1:property_name}(self) -> ${2:type}:",
+      "    return self.${3:attribute}",
+      "",
+      "@${1:property_name}.setter",
+      "def ${1:property_name}(self, value: ${2:type}):",
+      "    self.${3:attribute} = value",
+      "",
+      "${0}"
+    ]
+  },
+
+  // Request and Response Handling
+  "HTTP Request": {
+    "prefix": "httprequest",
+    "description": "HTTP Request",
+    "body": [
+      "import requests",
+      "",
+      "",
+      "response = requests.${1:get|post|put|delete}('${2:url}',",
+      "    headers={${3:header_key}: ${4:header_value}},",
+      "    params={${5:param_key}: ${6:param_value}},",
+      "    data=${7:data},",
+      "    json=${8:json_data}",
+      ")",
+      "",
+      "if response.status_code == 200:",
+      "    ${9:print(response.json())}",
+      "else:",
+      "    ${10:print(f'Error: {response.status_code}}')",
+      "",
+      "${0}"
+    ]
+  },
+
+  // Exception Handling
+  "Exception Handling": {
+    "prefix": "tryexcept",
+    "description": "Try Except Block",
+    "body": [
+      "try:",
+      "    ${1:code}",
+      "except ${2:Exception} as error:",
+      "    ${3:handle_exception}",
+      "",
+      "${0}"
+    ]
+  },
+
+  // Python Utils
+  "Terminal Colors Utility": {
+    "prefix": "utils:terminalcolors",
+    "description": "Complete terminal color utilities module",
+    "body": [
+      "\"\"\"",
+      "Terminal Color Utilities",
+      "",
+      "A utility module for colorizing terminal output using ANSI escape codes.",
+      "Provides a comprehensive set of colors and text formatting options.",
+      "",
+      "Public API:",
+      "    - Colors (enum): All available color codes",
+      "    - colorize(): Main function to colorize text",
+      "    - print_colored(): Print colored text directly",
+      "    - style_text(): Apply multiple styles to text",
+      "",
+      "Example:",
+      "    from colors import Colors, colorize",
+      "",
+      "    print(colorize(\"Hello World!\", Colors.BOLD_GREEN))",
+      "    print(colorize(\"Error message\", Colors.RED))",
+      "\"\"\"",
+      "",
+      "from enum import StrEnum",
+      "from typing import Union",
+      "",
+      "",
+      "class Colors(StrEnum):",
+      "    \"\"\"ASCII color codes enum for terminal output formatting.\"\"\"",
+      "",
+      "    # Basic Colors",
+      "    RED = \"\\033[31m\"",
+      "    GREEN = \"\\033[32m\"",
+      "    YELLOW = \"\\033[33m\"",
+      "    BLUE = \"\\033[34m\"",
+      "    MAGENTA = \"\\033[35m\"",
+      "    CYAN = \"\\033[36m\"",
+      "    WHITE = \"\\033[37m\"",
+      "    BLACK = \"\\033[30m\"",
+      "",
+      "    # Text Formatting",
+      "    RESET = \"\\033[0m\"",
+      "    BOLD = \"\\033[1m\"",
+      "    DIM = \"\\033[2m\"",
+      "    ITALIC = \"\\033[3m\"",
+      "    UNDERLINE = \"\\033[4m\"",
+      "    BLINK = \"\\033[5m\"",
+      "    REVERSE = \"\\033[7m\"",
+      "    HIDE = \"\\033[8m\"",
+      "    STRIKETHROUGH = \"\\033[9m\"",
+      "",
+      "    # Bold Colors",
+      "    BOLD_RED = \"\\033[1;31m\"",
+      "    BOLD_GREEN = \"\\033[1;32m\"",
+      "    BOLD_YELLOW = \"\\033[1;33m\"",
+      "    BOLD_BLUE = \"\\033[1;34m\"",
+      "    BOLD_MAGENTA = \"\\033[1;35m\"",
+      "    BOLD_CYAN = \"\\033[1;36m\"",
+      "    BOLD_WHITE = \"\\033[1;37m\"",
+      "    BOLD_BLACK = \"\\033[1;30m\"",
+      "",
+      "    # Background Colors",
+      "    BG_RED = \"\\033[41m\"",
+      "    BG_GREEN = \"\\033[42m\"",
+      "    BG_YELLOW = \"\\033[43m\"",
+      "    BG_BLUE = \"\\033[44m\"",
+      "    BG_MAGENTA = \"\\033[45m\"",
+      "    BG_CYAN = \"\\033[46m\"",
+      "    BG_WHITE = \"\\033[47m\"",
+      "    BG_BLACK = \"\\033[40m\"",
+      "",
+      "",
+      "def colorize(text: str, color: Union[Colors, str] = Colors.WHITE) -> str:",
+      "    \"\"\"",
+      "    Colorize text with the specified color and automatically reset formatting.",
+      "",
+      "    Args:",
+      "        text (str): The text to colorize",
+      "        color (Colors | str): Color from Colors enum or custom ANSI code",
+      "",
+      "    Returns:",
+      "        str: Formatted text with color codes",
+      "",
+      "    Raises:",
+      "        ValueError: If color is not a valid Colors enum value or string",
+      "",
+      "    Examples:",
+      "        >>> colorize(\"Hello\", Colors.RED)",
+      "        '\\033[31mHello\\033[0m'",
+      "        >>> colorize(\"World\", Colors.BOLD_GREEN)",
+      "        '\\033[1;32mWorld\\033[0m'",
+      "    \"\"\"",
+      "    if isinstance(color, str):",
+      "        # Allow custom ANSI codes",
+      "        return f\"{color}{text}{Colors.RESET}\"",
+      "    elif isinstance(color, Colors):",
+      "        return f\"{color}{text}{Colors.RESET}\"",
+      "    else:",
+      "        raise ValueError(",
+      "            colorize(",
+      "                f\"Invalid color type: {type(color)}. Must be Colors enum or string.\",",
+      "                Colors.RED,",
+      "            )",
+      "        )",
+      "",
+      "",
+      "def print_colored(text: str, color: Union[Colors, str] = Colors.WHITE) -> None:",
+      "    \"\"\"",
+      "    Print colorized text directly to stdout.",
+      "",
+      "    Args:",
+      "        text (str): The text to print",
+      "        color (Colors | str): Color from Colors enum or custom ANSI code",
+      "    \"\"\"",
+      "    print(colorize(text, color))",
+      "",
+      "",
+      "def style_text(text: str, *styles: Colors) -> str:",
+      "    \"\"\"",
+      "    Apply multiple text styles to text.",
+      "",
+      "    Args:",
+      "        text (str): The text to style",
+      "        *styles: Variable number of Colors enum values for styling",
+      "",
+      "    Returns:",
+      "        str: Text with all styles applied",
+      "",
+      "    Example:",
+      "        >>> style_text(\"Bold Red Text\", Colors.BOLD, Colors.RED)",
+      "        '\\033[1m\\033[31mBold Red Text\\033[0m'",
+      "    \"\"\"",
+      "    style_codes = \"\".join(str(style) for style in styles)",
+      "    return f\"{style_codes}{text}{Colors.RESET}\"",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    # Demonstrate all available colors and formatting options.",
+      "    print(colorize(\"=== Terminal Color Demo ===\", Colors.BOLD_CYAN))",
+      "    print()",
+      "",
+      "    # Basic colors",
+      "    print(colorize(\"Basic Colors:\", Colors.BOLD))",
+      "    basic_colors = [",
+      "        Colors.RED,",
+      "        Colors.GREEN,",
+      "        Colors.YELLOW,",
+      "        Colors.BLUE,",
+      "        Colors.MAGENTA,",
+      "        Colors.CYAN,",
+      "        Colors.WHITE,",
+      "        Colors.BLACK,",
+      "    ]",
+      "    for color in basic_colors:",
+      "        print(f\"  {colorize(f'{color.name.ljust(10)} - Sample text', color)}\")",
+      "    print()",
+      "",
+      "    # Bold colors",
+      "    print(colorize(\"Bold Colors:\", Colors.BOLD))",
+      "    bold_colors = [",
+      "        Colors.BOLD_RED,",
+      "        Colors.BOLD_GREEN,",
+      "        Colors.BOLD_YELLOW,",
+      "        Colors.BOLD_BLUE,",
+      "        Colors.BOLD_MAGENTA,",
+      "        Colors.BOLD_CYAN,",
+      "        Colors.BOLD_WHITE,",
+      "        Colors.BOLD_BLACK,",
+      "    ]",
+      "    for color in bold_colors:",
+      "        print(f\"  {colorize(f'{color.name.ljust(12)} - Sample text', color)}\")",
+      "    print()",
+      "",
+      "    # Text formatting",
+      "    print(colorize(\"Text Formatting:\", Colors.BOLD))",
+      "    formatting = [",
+      "        Colors.BOLD,",
+      "        Colors.DIM,",
+      "        Colors.ITALIC,",
+      "        Colors.UNDERLINE,",
+      "        Colors.STRIKETHROUGH,",
+      "        Colors.REVERSE,",
+      "    ]",
+      "    for fmt in formatting:",
+      "        print(f\"  {colorize(f'{fmt.name.ljust(13)} - Sample text', fmt)}\")",
+      "    print()",
+      "",
+      "    # Background colors",
+      "    print(colorize(\"Background Colors:\", Colors.BOLD))",
+      "    bg_colors = [",
+      "        Colors.BG_RED,",
+      "        Colors.BG_GREEN,",
+      "        Colors.BG_YELLOW,",
+      "        Colors.BG_BLUE,",
+      "        Colors.BG_MAGENTA,",
+      "        Colors.BG_CYAN,",
+      "        Colors.BG_WHITE,",
+      "        Colors.BG_BLACK,",
+      "    ]",
+      "    for bg_color in bg_colors:",
+      "        print(f\"  {colorize(f'{bg_color.name.ljust(10)} - Sample text', bg_color)}\")",
+      "    print()",
+      "",
+      "    # Combined styles",
+      "    print(colorize(\"Combined Styles:\", Colors.BOLD))",
+      "    print(",
+      "        f\"  {style_text('Bold + Red + Underline', Colors.BOLD, Colors.RED, Colors.UNDERLINE)}\"",
+      "    )",
+      "    print(",
+      "        f\"  {style_text('Italic + Cyan + Background', Colors.ITALIC, Colors.CYAN, Colors.BG_BLACK)}\"",
+      "    )",
+      "    print()",
+      "",
+      "    # Example usage of the color utilities.",
+      "    print(\"\\n\" + colorize(\"Example Usage:\", Colors.BOLD_CYAN))",
+      "    print_colored(\"This is a red error message\", Colors.RED)",
+      "    print_colored(\"This is a green success message\", Colors.BOLD_GREEN)",
+      "    print(",
+      "        style_text(",
+      "            \"Multiple styles applied!\", Colors.BOLD, Colors.YELLOW, Colors.UNDERLINE",
+      "        )",
+      "    )",
+      "",
+      "${0}"
+    ]
+  }
+}

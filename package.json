@@ -77,6 +77,10 @@
       {
         "language": "typescriptreact",
         "path": "./snippets/react.code-snippets"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python.code-snippets"
       }
     ]
   },
