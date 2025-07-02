@@ -20,11 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
-
-      # - name: Package extension
-      #   run: npm run package
+      - name: Minify snippets
+        run: npm run minify:snippets
 
       - name: Publish to VS Code Marketplace
         run: npm run publish

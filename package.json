@@ -22,7 +22,9 @@
     "tsx",
     "jsx",
     "props",
-    "interface"
+    "interface",
+    "hooks",
+    "react hooks"
   ],
   "author": {
     "name": "codelab",
@@ -38,8 +40,8 @@
     "url": "https://github.com/iuritorres/codelab-snippets/issues"
   },
   "scripts": {
-    "publish": "vsce publish",
-    "test": "echo 'No tests configured'"
+    "minify:snippets": "node scripts/minify-snippets.js",
+    "publish": "vsce publish"
   },
   "contributes": {
     "snippets": [
