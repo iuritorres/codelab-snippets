@@ -1,10 +1,23 @@
 # ✨ Codelab Snippets
 
-Handy code snippets for fast and efficient TypeScript/React development. Boost your productivity with a comprehensive collection of React components, hooks, and JavaScript ES6+ snippets.
+Handy code snippets for fast and efficient development. Boost your productivity with a comprehensive collection of React components, hooks, JavaScript ES6+, and Python snippets.
+
+## 💡 Philosophy
+
+Our snippets are designed to be **intuitive and conversational** - you type what you want, almost like speaking your intention:
+
+- `erfc` → **"Export React Function Component"**
+- `erafcp` → **"Export React Arrow Function Component with Props"**
+- `statets` → **"State with TypeScript"**
+- `effecta` → **"Effect Async"**
+- `utils:terminalcolors` → **"Utils: Terminal Colors"**
+- `forenum` → **"For Enumerate"**
+
+The goal is to make coding feel like having a conversation with your editor. No more memorizing cryptic abbreviations! 🗣️💻
 
 ## 🚀 Features
 
-This extension provides a wide range of React/TypeScript and JavaScript snippets that help you write code faster:
+This extension provides a wide range of snippets for multiple languages that help you write code faster:
 
 ### React Function Components
 
@@ -144,10 +157,110 @@ This extension provides a wide range of React/TypeScript and JavaScript snippets
 | `ovalues`  | Object.values()  |
 | `oentries` | Object.entries() |
 
-## 📋 Requirements
+## � Python Snippets
+
+### Core Python
+
+| Prefix | Description                                    |
+| ------ | ---------------------------------------------- |
+| `main` | Main boilerplate (`if __name__ == '__main__'`) |
+| `imp`  | Import from module                             |
+| `ima`  | Import module as alias                         |
+
+### Dictionary Operations (Object Methods Equivalent)
+
+| Prefix    | Description               |
+| --------- | ------------------------- |
+| `dkeys`   | dictionary.keys()         |
+| `dvalues` | dictionary.values()       |
+| `ditems`  | dictionary.items()        |
+| `lkeys`   | list(dictionary.keys())   |
+| `lvalues` | list(dictionary.values()) |
+| `litems`  | list(dictionary.items())  |
+
+### List/Array Methods
+
+| Prefix    | Description                       |
+| --------- | --------------------------------- |
+| `lc`      | List Comprehension                |
+| `lcif`    | List Comprehension with Condition |
+| `map`     | Map function                      |
+| `filter`  | Filter function                   |
+| `lmap`    | Lambda with Map                   |
+| `lfilter` | Lambda with Filter                |
+| `reduce`  | Reduce function (functools)       |
+| `sort`    | Sort list in-place                |
+| `sorted`  | Sorted function (returns new)     |
+
+### List Operations
+
+| Prefix   | Description  |
+| -------- | ------------ |
+| `append` | List append  |
+| `extend` | List extend  |
+| `remove` | List remove  |
+| `pop`    | List pop     |
+| `index`  | List index   |
+| `count`  | List count   |
+| `any`    | Any function |
+| `all`    | All function |
+
+### Advanced Loops
+
+| Prefix     | Description             |
+| ---------- | ----------------------- |
+| `forin`    | For loop                |
+| `forenum`  | For loop with enumerate |
+| `forzip`   | For loop with zip       |
+| `forrange` | For loop with range     |
+
+### Dictionary Comprehensions
+
+| Prefix | Description                             |
+| ------ | --------------------------------------- |
+| `dc`   | Dictionary Comprehension                |
+| `dcif` | Dictionary Comprehension with Condition |
+
+### Class Definitions (Auto-Capitalization)
+
+| Prefix         | Description                  |
+| -------------- | ---------------------------- |
+| `class`        | Class Definition             |
+| `dataclass`    | Data Class Definition        |
+| `init`         | Constructor Method           |
+| `str`          | String Representation Method |
+| `staticmethod` | Static Method                |
+| `classmethod`  | Class Method                 |
+| `property`     | Property Method with Setter  |
+
+### Decorators & Utils
+
+| Prefix      | Description      |
+| ----------- | ---------------- |
+| `decorator` | Decorator Method |
+
+### HTTP & Networking
+
+| Prefix        | Description             |
+| ------------- | ----------------------- |
+| `httprequest` | HTTP Request (requests) |
+
+### Exception Handling
+
+| Prefix      | Description      |
+| ----------- | ---------------- |
+| `tryexcept` | Try Except Block |
+
+### Utility Collections
+
+| Prefix                 | Description                       |
+| ---------------------- | --------------------------------- |
+| `utils:terminalcolors` | Complete Terminal Color Utilities |
+
+## �📋 Requirements
 
 - VS Code 1.101.0 or higher
-- Works with JavaScript, TypeScript, JSX, and TSX files
+- Works with JavaScript, TypeScript, JSX, TSX, and Python files
 
 ## ⚙️ Extension Settings
 
@@ -212,6 +325,46 @@ Type `af` and press Tab:
 const functionName = (params) => {};
 ```
 
+### Python Class (Auto-Capitalization)
+
+Type `class` and press Tab, then type `myclass`:
+
+```python
+class MyClass:
+    def __init__(self, args) -> None:
+        pass
+```
+
+### Python List Comprehension
+
+Type `lc` and press Tab:
+
+```python
+[expression for item in iterable]
+```
+
+### Python Dictionary Operations
+
+Type `dkeys` and press Tab:
+
+```python
+dictionary.keys()
+```
+
+### Terminal Colors Utility
+
+Type `utils:terminalcolors` and press Tab:
+
+```python
+"""
+Terminal Color Utilities
+
+A utility module for colorizing terminal output using ANSI escape codes.
+Provides a comprehensive set of colors and text formatting options.
+...
+"""
+```
+
 ## 🎯 Tips
 
 - All snippets use placeholder variables - press Tab to navigate between them
@@ -220,6 +373,10 @@ const functionName = (params) => {};
 - Choose between verbose (full return blocks) and concise (inline JSX) variations based on your needs
 - Use JavaScript ES6+ snippets for modern JavaScript development
 - Console snippets help with debugging and performance monitoring
+- **Python class names automatically capitalize** (e.g., `myclass` → `Myclass`)
+- Python snippets mirror JavaScript functionality where applicable (e.g., `dkeys` = `Object.keys()`)
+- Use `utils:terminalcolors` for complete terminal color functionality
+- Python dictionary operations work seamlessly with modern Python patterns
 
 ## 🐛 Known Issues
 
@@ -227,14 +384,16 @@ No known issues at this time. Please report any problems on the GitHub repositor
 
 ## 📝 Release Notes
 
-### 0.0.1
+For detailed release notes and changelog, see [CHANGELOG.md](./CHANGELOG.md).
 
-Initial release with comprehensive React/TypeScript snippets:
+### Latest Release - 0.0.8
 
-- Function and Arrow Function Components
-- Components with Props and TypeScript interfaces
-- Concise variations for faster coding
-- Export variations (default, named)
+🐍 **Python Power & Enhanced Tooling** - Complete Python support with:
+
+- Complete Python snippets collection (dictionary operations, list methods, classes, utilities)
+- Smart auto-capitalization for Python class names
+- Terminal Colors Utility and enhanced build tooling
+- Cross-language consistency between Python and JavaScript snippets
 
 ---
 
