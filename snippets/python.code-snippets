@@ -541,8 +541,7 @@
       "            \"Multiple styles applied!\", Colors.BOLD, Colors.YELLOW, Colors.UNDERLINE",
       "        )",
       "    )",
-      "",
-      "${0}"
+      ""
     ]
   }
 }

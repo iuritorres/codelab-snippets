@@ -8,6 +8,18 @@ const files = readdirSync(SNIPPETS_DIR).filter((file) =>
   file.endsWith(".code-snippets")
 );
 
+let totalOriginalSize = 0;
+let totalMinifiedSize = 0;
+const fileStats = {};
+
+const formatBytes = (bytes) => {
+  return (bytes / 1024).toFixed(2);
+};
+
+const formatPercentage = (value) => {
+  return value.toFixed(2);
+};
+
 const removeComments = (content) => {
   const processLine = (line) => {
     const commentIndex = line.indexOf("//");
@@ -40,15 +52,59 @@ for (const file of files) {
 
   try {
     const content = readFileSync(fullPath, "utf8");
-    const contentWithoutComments = removeComments(content);
+    const originalSize = Buffer.byteLength(content, "utf8");
 
+    const contentWithoutComments = removeComments(content);
     const parsed = JSON.parse(contentWithoutComments);
     const minified = JSON.stringify(parsed);
 
     writeFileSync(fullPath, minified);
-    console.log(`✅ Minified: ${file}`);
+
+    const minifiedSize = Buffer.byteLength(minified, "utf8");
+    const savedBytes = originalSize - minifiedSize;
+    const savedPercentage = (savedBytes / originalSize) * 100;
+
+    fileStats[file] = {
+      "Original Size (KB)": formatBytes(originalSize) + " KB",
+      "Minified Size (KB)": formatBytes(minifiedSize) + " KB",
+      "Saved (KB)": formatBytes(savedBytes) + " KB",
+      "Saved (%)": formatPercentage(savedPercentage) + "%",
+    };
+
+    totalOriginalSize += originalSize;
+    totalMinifiedSize += minifiedSize;
+
+    console.log(
+      `✅ ${file}: ${formatBytes(originalSize)}KB → ${formatBytes(
+        minifiedSize
+      )}KB (saved ${formatBytes(savedBytes)}KB, ${formatPercentage(
+        savedPercentage
+      )}%)`
+    );
   } catch (error) {
     console.error(`❌ Error minifying ${file}: ${error.message}`);
     process.exit(1);
   }
 }
+
+console.log("\n" + "=".repeat(60));
+console.log("📋 DETAILED STATISTICS");
+console.log("=".repeat(60));
+
+console.table(fileStats);
+
+const totalSavedBytes = totalOriginalSize - totalMinifiedSize;
+const totalSavedPercentage = (totalSavedBytes / totalOriginalSize) * 100;
+
+console.log("\n" + "=".repeat(60));
+console.log("📊 MINIFICATION SUMMARY");
+console.log("=".repeat(60), "\n");
+console.log(`📁 Files processed: ${files.length}`);
+console.log(`📏 Original total size: ${formatBytes(totalOriginalSize)} KB`);
+console.log(`🗜️  Minified total size: ${formatBytes(totalMinifiedSize)} KB`);
+console.log(
+  `💾 Total memory saved: ${formatBytes(
+    totalSavedBytes
+  )} KB (${formatPercentage(totalSavedPercentage)}%)`
+);
+console.log("\n" + "=".repeat(60), "\n");
