@@ -13,6 +13,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for more React patterns
 - Vue.js snippets support
 - Next.js specific snippets
+- Python snippets support
+- Django snippets support
+
+## [0.0.7] - 2025-07-02 - "🔧 Optimization & Tooling"
+
+### Added
+- **Build tooling improvements**
+  - `minify:snippets` script for snippet optimization
+  - ES Modules support (`"type": "module"`)
+  - Enhanced keywords for better marketplace discovery
+- **Developer experience**
+  - Automated snippet minification process
+  - Modern JavaScript module system
+
+### Changed
+- Updated keywords to include "hooks" and "react hooks" for better discoverability
+- Improved project structure with proper ES Module configuration
+
+### Technical
+- Added `"type": "module"` to package.json for native ES Module support
+- Enhanced build scripts for extension optimization
 
 ## [0.0.6] - 2025-06-30 - "🎣 Hooks & ES6+ Collection"
 
