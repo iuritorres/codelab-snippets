@@ -10,12 +10,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Planned
 
 - html snippets support
-- css snippets support
 - Vue.js snippets support
 - Next.js specific snippets
 - Django snippets support
 - Pandas snippets support
 - Selenium snippets support
+- Kotlin snippets support
+
+## [0.1.0] - 2025-07-02 - "📝 Markdown Documentation Revolution"
+
+### Added
+
+- **📝 Complete Markdown Snippets Collection** - **Notion/Confluence Style Documentation**
+  - **🎯 Semantic Slash Commands** - Transform Markdown writing experience with intuitive `/command` syntax
+  - **Page Structure**: `/title`, `/h1-h6`, `/toc` for professional document hierarchy
+  - **Text Formatting**: `/bold`, `/italic`, `/strike`, `/code`, `/highlight` for rich content
+  - **Lists & Organization**: `/list`, `/numbered`, `/todo`, `/toggle` for structured information
+  - **Content Blocks**: `/paragraph`, `/quote`, `/codeblock`, `/divider`, `/table` for versatile layouts
+  - **Notion-Style Callouts**: `/info`, `/warning`, `/error`, `/success`, `/note`, `/tip` for highlighted content
+  - **Media Integration**: `/link`, `/image`, `/video` for multimedia documentation
+  - **Professional Templates**:
+    - `/meeting` - Complete meeting notes with agenda and action items
+    - `/project` - Project plan with timeline, team, and deliverables
+    - `/docs` - Standard documentation page template
+    - `/api` - API endpoint documentation with examples
+    - `/readme` - Complete README template with badges
+    - `/changelog` - Structured changelog following Keep a Changelog format
+    - `/spec` - Feature specification with acceptance criteria
+  - **Interactive Elements**: `/tabs`, `/accordion`, `/progress`, `/kbd` for dynamic content
+  - **Database-like Structures**: Property lists, status badges for project management
+
+### Improved
+
+- **🌍 International Consistency** - All snippets now follow English conventions for better global compatibility
+- **📚 Enhanced Documentation** - Added comprehensive Markdown snippets section to README
+- **🔍 Better Discoverability** - Added markdown, documentation, notion, confluence keywords for improved searchability
 
 ## [0.0.9] - 2025-07-02 - "✨ Enhanced UX, Clarity Improvements & CSS Support"
 

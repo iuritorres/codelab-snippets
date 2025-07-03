@@ -13,12 +13,20 @@ Our snippets are designed to be **intuitive and conversational** - you type what
 - `animate:pulse` → **"Animation - Pulse Effect"** - _Breathing pulse effect - perfect for call-to-action buttons_ 🎬
 - `utils:terminalcolors` → **"Terminal Colors Utility Module"** - _Complete terminal color utilities module with ANSI codes_
 - `forenum` → **"For Loop with Index (Enumerate)"** - _Iterate with both index and value using enumerate_
+- `/meeting` → **"Meeting Notes Template"** - _Complete meeting documentation with agenda and action items_ 📝
 
 The goal is to make coding feel like having a conversation with your editor, while also learning best practices through clear descriptions. No more memorizing cryptic abbreviations! 🗣️💻✨
 
 ## 🚀 Features
 
 This extension provides a wide range of snippets for multiple languages that help you write code faster:
+
+- **⚛️ React Components** - Function/Arrow components with TypeScript support
+- **🪝 React Hooks** - useState, useEffect, custom hooks, and advanced patterns
+- **🔧 JavaScript ES6+** - Modern syntax, async/await, destructuring, modules
+- **🐍 Python Utilities** - Classes, loops, comprehensions, HTTP requests, decorators
+- **🎨 CSS Animations** - Professional animation library with ready-to-use effects
+- **📝 Markdown Documentation** - Notion/Confluence-style slash commands for professional docs
 
 ### React Function Components
 
@@ -417,6 +425,80 @@ Provides a comprehensive set of colors and text formatting options.
 ...
 """
 ```
+
+### 📝 Markdown Documentation (Notion-Style!)
+
+Type `/meeting` and press Tab:
+
+```markdown
+# 📅 Meeting - Project Kickoff
+
+**Date:** 02/07/2025  
+**Time:** 09:00 - 10:00  
+**Attendees:** John Doe, Jane Smith
+
+## 📋 Agenda
+
+1. Project Overview
+2. Timeline Discussion
+3. Resource Allocation
+
+## 📝 Notes
+
+Discussion notes and meeting highlights
+
+## ✅ Action Items
+
+- [ ] Create project roadmap - Responsible: John
+- [ ] Setup development environment - Responsible: Jane
+
+## 🔄 Next Steps
+
+Follow-up actions and next meeting scheduling
+```
+
+### 📚 Markdown API Documentation
+
+Type `/api` and press Tab:
+
+```markdown
+# 🔌 API: User Management
+
+## 📖 Description
+
+Complete user management API with authentication
+
+## 🌐 Base URL
+
+https://api.example.com/v1
+```
+
+## 🔒 Authentication
+
+Bearer Token authentication required
+
+## 🛰️ Endpoints
+
+### GET /users
+
+**Description:** Retrieve all users
+
+**Parameters:**
+
+- `limit` (number) - Maximum number of users to return
+
+**Response:**
+
+```json
+{
+  "users": [...]
+}
+```
+
+**Status Codes:**
+
+- `200` - Success
+- `401` - Unauthorized
 
 ### CSS Animation (Game Changer!)
 
