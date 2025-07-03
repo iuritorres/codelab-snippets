@@ -17,6 +17,58 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Pandas snippets support
 - Selenium snippets support
 
+## [0.0.9] - 2025-07-02 - "✨ Enhanced UX, Clarity Improvements & CSS Support"
+
+### Added
+
+- **🎨 Complete CSS Snippets Collection** - Professional styling toolkit
+  - **Modern CSS Reset & Boilerplate**: Complete reset with REM system, viewport optimization
+  - **Flexbox Layout System**: Complete container setup with all properties and shortcuts
+  - **🎬 Animation Library (`animate:...`)** - **GAME CHANGER** for modern web animations:
+    - `animate:pulse` - Breathing pulse effect for CTAs and attention-grabbing
+    - `animate:fade-in` / `animate:fade-out` - Smooth content transitions
+    - `animate:slide-in` - Perfect for mobile menus and sidebar navigation
+    - `animate:bounce` - Playful effect for notifications and success messages
+    - `animate:shake` - Error states and form validation feedback
+    - `animate:spin` - Loading spinners and rotating icons
+    - `animate:zoom-in` / `animate:zoom-out` - Modal appearances and exits
+    - `animate:flip` - 3D card reveals and interactive elements
+  - **Transition Presets**: Quick (150ms), Standard (300ms), Slow (500ms) durations
+  - **Utility Classes**: Box shadows, border radius, spacing shortcuts
+
+### Improved
+
+- **🎯 Snippet Clarity & UX Overhaul** - Complete redesign of snippet titles and descriptions
+  - **React Snippets**: Clearer, more intuitive titles and descriptions
+    - "Function Component (Basic)" instead of "React Function Component"
+    - "Arrow Component (Exported)" instead of "Export React Arrow Function Component"
+    - More descriptive explanations of when and how to use each snippet
+    - Better TypeScript context in descriptions
+  - **Python Snippets**: Enhanced descriptions with functionality explanations
+    - "Import Specific Items" instead of "Import Default"
+    - "Create state variable with setter using useState hook" instead of "useState Hook"
+    - Cross-reference equivalents (e.g., "equivalent to Object.keys")
+    - Technical context for better understanding
+  - **JavaScript ES6+ Snippets**: Already optimized in previous versions
+- **📝 Better Developer Experience**
+  - All snippet descriptions now explain the purpose and use case
+  - Consistent naming pattern across all snippet categories
+  - More educational approach - developers learn while coding
+  - Improved discoverability through clearer descriptions
+
+### Enhanced
+
+- **🔍 Improved Snippet Discovery**: Titles now clearly indicate functionality
+- **📚 Educational Descriptions**: Each snippet includes helpful context
+- **🎨 Consistent Patterns**: Unified approach to naming and describing snippets
+- **⚡ Productivity Boost**: Less time wondering what snippets do, more time coding
+
+### Technical
+
+- Maintained all existing functionality while improving user interface
+- No breaking changes to existing prefix shortcuts
+- Enhanced IntelliSense experience with clearer descriptions
+
 ## [0.0.8] - 2025-07-02 - "🐍 Python Power & Enhanced Tooling"
 
 ### Added
