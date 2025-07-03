@@ -102,6 +102,10 @@
       {
         "language": "scss",
         "path": "./snippets/css.code-snippets"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.code-snippets"
       }
     ]
   },

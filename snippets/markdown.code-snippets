@@ -1,0 +1,643 @@
+{
+  // Page Structure & Headers
+  "Page Title (H1)": {
+    "prefix": "/title",
+    "description": "Create main page title (H1) - equivalent to Notion page title",
+    "body": ["# ${1:Page Title}", "", "$0"]
+  },
+  "Heading 1": {
+    "prefix": "/h1",
+    "description": "Create large heading (H1) for main sections",
+    "body": ["# ${1:Heading}", "", "$0"]
+  },
+  "Heading 2": {
+    "prefix": "/h2",
+    "description": "Create medium heading (H2) for subsections",
+    "body": ["## ${1:Heading}", "", "$0"]
+  },
+  "Heading 3": {
+    "prefix": "/h3",
+    "description": "Create small heading (H3) for sub-subsections",
+    "body": ["### ${1:Heading}", "", "$0"]
+  },
+  "Heading 4": {
+    "prefix": "/h4",
+    "description": "Create smaller heading (H4) for minor sections",
+    "body": ["#### ${1:Heading}", "", "$0"]
+  },
+  "Heading 5": {
+    "prefix": "/h5",
+    "description": "Create even smaller heading (H5) for very minor sections",
+    "body": ["##### ${1:Heading}", "", "$0"]
+  },
+  "Heading 6": {
+    "prefix": "/h6",
+    "description": "Create smallest heading (H6) for the least important sections",
+    "body": ["###### ${1:Heading}", "", "$0"]
+  },
+  "Table of Contents": {
+    "prefix": "/toc",
+    "description": "Create table of contents with anchor links",
+    "body": [
+      "## Table of Contents",
+      "",
+      "- [${1:Section 1}](#${2:section-1})",
+      "- [${3:Section 2}](#${4:section-2})",
+      "- [${5:Section 3}](#${6:section-3})",
+      "",
+      "$0"
+    ]
+  },
+
+  // Text Formatting
+  "Bold Text": {
+    "prefix": "/bold",
+    "description": "Make text bold for emphasis",
+    "body": ["**${1:bold text}**$0"]
+  },
+  "Italic Text": {
+    "prefix": "/italic",
+    "description": "Make text italic for emphasis",
+    "body": ["*${1:italic text}*$0"]
+  },
+  "Strikethrough Text": {
+    "prefix": "/strike",
+    "description": "Add strikethrough for deleted or outdated content",
+    "body": ["~~${1:strikethrough text}~~$0"]
+  },
+  "Inline Code": {
+    "prefix": "/code",
+    "description": "Format text as inline code",
+    "body": ["`${1:code}`$0"]
+  },
+  "Highlighted Text": {
+    "prefix": "/highlight",
+    "description": "Highlight important text (using HTML mark tag)",
+    "body": ["<mark>${1:highlighted text}</mark>$0"]
+  },
+
+  // Lists & Organization
+  "Bulleted List": {
+    "prefix": "/list",
+    "description": "Create bulleted list for unordered items",
+    "body": [
+      "- ${1:First item}",
+      "- ${2:Second item}",
+      "- ${3:Third item}",
+      "",
+      "$0"
+    ]
+  },
+  "Numbered List": {
+    "prefix": "/numbered",
+    "description": "Create numbered list for ordered items",
+    "body": [
+      "1. ${1:First item}",
+      "2. ${2:Second item}",
+      "3. ${3:Third item}",
+      "",
+      "$0"
+    ]
+  },
+  "Checklist/Todo": {
+    "prefix": "/todo",
+    "description": "Create interactive checklist with checkboxes",
+    "body": [
+      "- [ ] ${1:Todo item 1}",
+      "- [ ] ${2:Todo item 2}",
+      "- [x] ${3:Completed item}",
+      "",
+      "$0"
+    ]
+  },
+  "Toggle/Collapsible": {
+    "prefix": "/collapsible",
+    "description": "Create collapsible section (using HTML details)",
+    "body": [
+      "<details>",
+      "<summary>${1:Click to expand}</summary>",
+      "",
+      "${2:Hidden content goes here}",
+      "",
+      "</details>",
+      "",
+      "$0"
+    ]
+  },
+
+  // Content Blocks
+  "Paragraph": {
+    "prefix": "/paragraph",
+    "description": "Create paragraph with proper spacing",
+    "body": ["${1:Paragraph text}", "", "$0"]
+  },
+  "Quote/Blockquote": {
+    "prefix": "/quote",
+    "description": "Create blockquote for citations or emphasis",
+    "body": ["> ${1:Quote text}", "> ", "> — ${2:Author}", "", "$0"]
+  },
+  "Code Block": {
+    "prefix": "/codeblock",
+    "description": "Create syntax-highlighted code block",
+    "body": [
+      "```${1|javascript,typescript,python,css,html,json,bash,sql|}",
+      "${2:code}",
+      "```",
+      "",
+      "$0"
+    ]
+  },
+  "Divider/Separator": {
+    "prefix": "/divider",
+    "description": "Add horizontal rule to separate sections",
+    "body": ["---", "", "$0"]
+  },
+
+  // Tables
+  "Table": {
+    "prefix": "/table",
+    "description": "Create table with headers and sample data",
+    "body": [
+      "| ${1:Header 1} | ${2:Header 2} | ${3:Header 3} |",
+      "|--------------|--------------|--------------|",
+      "| ${4:Row 1 Col 1} | ${5:Row 1 Col 2} | ${6:Row 1 Col 3} |",
+      "| ${7:Row 2 Col 1} | ${8:Row 2 Col 2} | ${9:Row 2 Col 3} |",
+      "",
+      "$0"
+    ]
+  },
+  "Simple Table": {
+    "prefix": "/table2",
+    "description": "Create simple 2-column table",
+    "body": [
+      "| ${1:Column 1} | ${2:Column 2} |",
+      "|--------------|--------------|",
+      "| ${3:Data 1} | ${4:Data 2} |",
+      "",
+      "$0"
+    ]
+  },
+
+  // Media & Links
+  "Link": {
+    "prefix": "/link",
+    "description": "Create clickable link",
+    "body": ["[${1:link text}](${2:https://example.com})$0"]
+  },
+  "Image": {
+    "prefix": "/image",
+    "description": "Embed image with alt text",
+    "body": ["![${1:alt text}](${2:image-url})$0"]
+  },
+  "Video Embed": {
+    "prefix": "/video",
+    "description": "Embed video using HTML5 video tag",
+    "body": [
+      "<video controls width=\"${1:100%}\">",
+      "  <source src=\"${2:video-url}\" type=\"video/mp4\">",
+      "  Your browser does not support the video tag.",
+      "</video>",
+      "",
+      "$0"
+    ]
+  },
+
+  // Callouts & Alerts (Notion-style)
+  "Info Callout": {
+    "prefix": "/info",
+    "description": "Create info callout box (blue theme)",
+    "body": ["> [!INFO]", "> ${1:Information message}", "", "$0"]
+  },
+  "Warning Callout": {
+    "prefix": "/warning",
+    "description": "Create warning callout box (yellow theme)",
+    "body": ["> [!WARNING]", "> ${1:Warning message}", "", "$0"]
+  },
+  "Error Callout": {
+    "prefix": "/error",
+    "description": "Create error callout box (red theme)",
+    "body": ["> [!ERROR]", "> ${1:Error message}", "", "$0"]
+  },
+  "Success Callout": {
+    "prefix": "/success",
+    "description": "Create success callout box (green theme)",
+    "body": ["> [!SUCCESS]", "> ${1:Success message}", "", "$0"]
+  },
+  "Note Callout": {
+    "prefix": "/note",
+    "description": "Create note callout box (gray theme)",
+    "body": ["> [!NOTE]", "> ${1:Note message}", "", "$0"]
+  },
+  "Tip Callout": {
+    "prefix": "/tip",
+    "description": "Create tip callout box (light blue theme)",
+    "body": ["> [!TIP]", "> ${1:Tip message}", "", "$0"]
+  },
+
+  // Database-like Structures
+  "Property List": {
+    "prefix": "/properties",
+    "description": "Create property list (key-value pairs)",
+    "body": [
+      "**${1:Property Name}:** ${2:Value}  ",
+      "**${3:Property Name}:** ${4:Value}  ",
+      "**${5:Property Name}:** ${6:Value}  ",
+      "",
+      "$0"
+    ]
+  },
+  "Status Badge": {
+    "prefix": "/status",
+    "description": "Create status badge using HTML",
+    "body": [
+      "<span style=\"background-color: ${1|#28a745,#ffc107,#dc3545,#007bff|}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px;\">${2:Status}</span>$0"
+    ]
+  },
+
+  // Documentation Patterns & Templates
+  "API Documentation": {
+    "prefix": "/api",
+    "description": "🔌 Complete API documentation template",
+    "body": [
+      "# 🔌 API: ${1:API Name}",
+      "",
+      "## 📖 Description",
+      "",
+      "${2:API description and purpose}",
+      "",
+      "## 🌐 Base URL",
+      "",
+      "```",
+      "${3:https://api.example.com/v1}",
+      "```",
+      "",
+      "## 🔐 Authentication",
+      "",
+      "${4:Authentication type (Bearer Token, API Key, etc.)}",
+      "",
+      "## 📡 Endpoints",
+      "",
+      "### ${5|GET,POST,PUT,DELETE,PATCH|} /${6:endpoint}",
+      "",
+      "**Description:** ${7:Endpoint description}",
+      "",
+      "**Parameters:**",
+      "- `${8:param1}` (${9:string}) - ${10:Parameter description}",
+      "",
+      "**Response:**",
+      "```json",
+      "{",
+      "  \"${11:field}\": \"${12:value}\"",
+      "}",
+      "```",
+      "",
+      "**Status Codes:**",
+      "- `200` - Success",
+      "- `400` - Bad Request",
+      "- `401` - Unauthorized",
+      "- `404` - Not Found",
+      "",
+      "$0"
+    ]
+  },
+  "Feature Specification": {
+    "prefix": "/spec",
+    "description": "📋 Complete feature specification template",
+    "body": [
+      "# 📋 Specification: ${1:Feature Name}",
+      "",
+      "## 🎯 Objective",
+      "",
+      "${2:Feature objective and motivation}",
+      "",
+      "## 👤 Target User",
+      "",
+      "${3:Profile of the user who will use this feature}",
+      "",
+      "## 📖 Description",
+      "",
+      "${4:Detailed functionality description}",
+      "",
+      "## ✅ Acceptance Criteria",
+      "",
+      "- [ ] ${5:Criterion 1}",
+      "- [ ] ${6:Criterion 2}",
+      "- [ ] ${7:Criterion 3}",
+      "",
+      "## 🔄 User Flow",
+      "",
+      "1. ${8:Step 1}",
+      "2. ${9:Step 2}",
+      "3. ${10:Step 3}",
+      "",
+      "## 🎨 Design/UI",
+      "",
+      "${11:Design references, mockups, etc.}",
+      "",
+      "## 🔧 Technical Considerations",
+      "",
+      "${12:Technical aspects, limitations, dependencies}",
+      "",
+      "## 🧪 Testing",
+      "",
+      "${13:Testing strategy and test cases}",
+      "",
+      "$0"
+    ]
+  },
+  "Documentation Page": {
+    "prefix": "/docs",
+    "description": "📚 Standard documentation page template",
+    "body": [
+      "# ${1:Feature/Component Name}",
+      "",
+      "> [!INFO]",
+      "> ${2:Brief description of what this is}",
+      "",
+      "## Overview",
+      "",
+      "${3:Detailed description}",
+      "",
+      "## Usage",
+      "",
+      "```${4|javascript,typescript,python|}",
+      "${5:code example}",
+      "```",
+      "",
+      "## Parameters",
+      "",
+      "| Parameter | Type | Required | Description |",
+      "|-----------|------|----------|-------------|",
+      "| `${6:param1}` | `${7:string}` | ${8:Yes} | ${9:Description} |",
+      "| `${10:param2}` | `${11:number}` | ${12:No} | ${13:Description} |",
+      "",
+      "## Examples",
+      "",
+      "### ${14:Example Name}",
+      "",
+      "${15:Example description}",
+      "",
+      "```${16|javascript,typescript,python|}",
+      "${17:example code}",
+      "```",
+      "",
+      "## See Also",
+      "",
+      "- [${18:Related Topic}](${19:URL})",
+      "",
+      "$0"
+    ]
+  },
+  "README Template": {
+    "prefix": "/readme",
+    "description": "📖 Complete README template with badges and sections",
+    "body": [
+      "# ${1:Project Name}",
+      "",
+      "[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)",
+      "[![Version](https://img.shields.io/badge/version-${2:1.0.0}-green.svg)]()",
+      "",
+      "## 📖 Description",
+      "",
+      "${3:Concise project description}",
+      "",
+      "## ✨ Features",
+      "",
+      "- ${4:Feature 1}",
+      "- ${5:Feature 2}",
+      "- ${6:Feature 3}",
+      "",
+      "## 🚀 Installation",
+      "",
+      "```bash",
+      "${7:npm install}",
+      "```",
+      "",
+      "## 💻 Usage",
+      "",
+      "```${8|javascript,typescript,python,bash|}",
+      "${9:// Usage example}",
+      "```",
+      "",
+      "## 🤝 Contributing",
+      "",
+      "1. Fork the project",
+      "2. Create a feature branch (`git checkout -b feature/AmazingFeature`)",
+      "3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)",
+      "4. Push to the branch (`git push origin feature/AmazingFeature`)",
+      "5. Open a Pull Request",
+      "",
+      "## 📄 License",
+      "",
+      "This project is licensed under the ${10:MIT} License - see the [LICENSE](LICENSE) file for details.",
+      "",
+      "$0"
+    ]
+  },
+  "Changelog Template": {
+    "prefix": "/changelog",
+    "description": "📝 Structured changelog following Keep a Changelog format",
+    "body": [
+      "# 📝 Changelog",
+      "",
+      "## [${1:1.0.0}] - ${2:YYYY-MM-DD}",
+      "",
+      "### ✨ Added",
+      "- ${3:New functionality}",
+      "",
+      "### 🔧 Changed",
+      "- ${4:Changes to existing functionality}",
+      "",
+      "### 🐛 Fixed",
+      "- ${5:Bug fix}",
+      "",
+      "### ❌ Removed",
+      "- ${6:Removed functionality}",
+      "",
+      "$0"
+    ]
+  },
+  "Requirements Document": {
+    "prefix": "/requirements",
+    "description": "📋 Requirements section with checkboxes",
+    "body": [
+      "## Requirements",
+      "",
+      "- [ ] ${1:Requirement 1}",
+      "- [ ] ${2:Requirement 2}",
+      "- [ ] ${3:Requirement 3}",
+      "",
+      "$0"
+    ]
+  },
+  "Step-by-Step Tutorial": {
+    "prefix": "/steps",
+    "description": "� Step-by-step tutorial format",
+    "body": [
+      "## Steps",
+      "",
+      "### Step 1: ${1:First Step}",
+      "",
+      "${2:Step description}",
+      "",
+      "### Step 2: ${3:Second Step}",
+      "",
+      "${4:Step description}",
+      "",
+      "### Step 3: ${5:Third Step}",
+      "",
+      "${6:Step description}",
+      "",
+      "$0"
+    ]
+  },
+
+  // Project & Meeting Templates
+  "Meeting Notes": {
+    "prefix": "/meeting",
+    "description": "📅 Complete meeting notes template",
+    "body": [
+      "# 📅 Meeting - ${1:Title}",
+      "",
+      "**Date:** ${2:DD/MM/YYYY}  ",
+      "**Time:** ${3:HH:MM} - ${4:HH:MM}  ",
+      "**Attendees:** ${5:Name 1, Name 2}",
+      "",
+      "## 📋 Agenda",
+      "",
+      "1. ${6:Topic 1}",
+      "2. ${7:Topic 2}",
+      "3. ${8:Topic 3}",
+      "",
+      "## 📝 Notes",
+      "",
+      "${9:Meeting discussions and notes}",
+      "",
+      "## ✅ Action Items",
+      "",
+      "- [ ] ${10:Action 1} - Responsible: ${11:Name}",
+      "- [ ] ${12:Action 2} - Responsible: ${13:Name}",
+      "",
+      "## 🔄 Next Steps",
+      "",
+      "${14:Next actions and follow-ups}",
+      "",
+      "$0"
+    ]
+  },
+  "Project Plan": {
+    "prefix": "/project",
+    "description": "🚀 Complete project documentation template",
+    "body": [
+      "# 🚀 Project: ${1:Project Name}",
+      "",
+      "## 📖 Overview",
+      "",
+      "${2:Project description and main objectives}",
+      "",
+      "## 🎯 Objectives",
+      "",
+      "- ${3:Objective 1}",
+      "- ${4:Objective 2}",
+      "- ${5:Objective 3}",
+      "",
+      "## 👥 Team",
+      "",
+      "| Role | Name | Contact |",
+      "|------|------|---------|",
+      "| ${6:Product Owner} | ${7:Name} | ${8:email@example.com} |",
+      "| ${9:Developer} | ${10:Name} | ${11:email@example.com} |",
+      "",
+      "## 📅 Timeline",
+      "",
+      "- **Start:** ${12:DD/MM/YYYY}",
+      "- **Delivery:** ${13:DD/MM/YYYY}",
+      "",
+      "## 🔧 Technologies",
+      "",
+      "- ${14:Technology 1}",
+      "- ${15:Technology 2}",
+      "",
+      "## 📋 Status",
+      "",
+      "- [ ] ${16:Task 1}",
+      "- [ ] ${17:Task 2}",
+      "- [x] ${18:Completed task}",
+      "",
+      "$0"
+    ]
+  },
+
+  // Interactive Elements
+  "Tabs": {
+    "prefix": "/tabs",
+    "description": "Create tabbed content using HTML",
+    "body": [
+      "<div class=\"tabs\">",
+      "  <input type=\"radio\" id=\"tab1\" name=\"tabs\" checked>",
+      "  <label for=\"tab1\">${1:Tab 1}</label>",
+      "  <div class=\"tab-content\">",
+      "    ${2:Content for tab 1}",
+      "  </div>",
+      "",
+      "  <input type=\"radio\" id=\"tab2\" name=\"tabs\">",
+      "  <label for=\"tab2\">${3:Tab 2}</label>",
+      "  <div class=\"tab-content\">",
+      "    ${4:Content for tab 2}",
+      "  </div>",
+      "</div>",
+      "",
+      "$0"
+    ]
+  },
+  "Accordion": {
+    "prefix": "/accordion",
+    "description": "Create accordion/expandable sections",
+    "body": [
+      "<details>",
+      "<summary>${1:Section 1}</summary>",
+      "${2:Content 1}",
+      "</details>",
+      "",
+      "<details>",
+      "<summary>${3:Section 2}</summary>",
+      "${4:Content 2}",
+      "</details>",
+      "",
+      "<details>",
+      "<summary>${5:Section 3}</summary>",
+      "${6:Content 3}",
+      "</details>",
+      "",
+      "$0"
+    ]
+  },
+
+  // Special Formatting
+  "Progress Bar": {
+    "prefix": "/progress",
+    "description": "Create visual progress bar using HTML",
+    "body": [
+      "**${1:Task Name}**",
+      "<progress value=\"${2:70}\" max=\"100\"></progress> ${3:70%}",
+      "",
+      "$0"
+    ]
+  },
+  "Keyboard Shortcut": {
+    "prefix": "/kbd",
+    "description": "Format keyboard shortcuts",
+    "body": ["<kbd>${1:Ctrl}</kbd> + <kbd>${2:C}</kbd>$0"]
+  },
+  "Footnote": {
+    "prefix": "/footnote",
+    "description": "Add footnote reference and definition",
+    "body": [
+      "${1:Text with footnote}[^${2:1}]",
+      "",
+      "[^${2:1}]: ${3:Footnote explanation}",
+      "",
+      "$0"
+    ]
+  }
+}
