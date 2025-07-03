@@ -19,6 +19,8 @@
     "typescript",
     "javascript",
     "python",
+    "css",
+    "scss",
     "snippets",
     "components",
     "tsx",
@@ -27,7 +29,8 @@
     "interface",
     "hooks",
     "react hooks",
-    "python snippets"
+    "python snippets",
+    "css snippets"
   ],
   "author": {
     "name": "codelab",
@@ -87,6 +90,18 @@
       {
         "language": "python",
         "path": "./snippets/python.code-snippets"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/css.code-snippets"
+      },
+      {
+        "language": "postcss",
+        "path": "./snippets/css.code-snippets"
+      },
+      {
+        "language": "scss",
+        "path": "./snippets/css.code-snippets"
       }
     ]
   },
