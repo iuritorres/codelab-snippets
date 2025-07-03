@@ -471,7 +471,6 @@ Complete user management API with authentication
 ## 🌐 Base URL
 
 https://api.example.com/v1
-```
 
 ## 🔒 Authentication
 
@@ -489,16 +488,15 @@ Bearer Token authentication required
 
 **Response:**
 
-```json
 {
-  "users": [...]
+"users": [...]
 }
-```
 
 **Status Codes:**
 
 - `200` - Success
 - `401` - Unauthorized
+```
 
 ### CSS Animation (Game Changer!)
 
