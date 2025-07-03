@@ -1,71 +1,71 @@
 {
   // ES6+ Functions
-  "Arrow Function": {
+  "Arrow Function with Block": {
     "prefix": "af",
-    "description": "Arrow Function",
+    "description": "Create arrow function with curly braces block",
     "body": ["const ${1:functionName} = (${2:params}) => {", "  $0", "};"]
   },
-  "Arrow Function (Inline)": {
+  "Arrow Function Inline": {
     "prefix": "afi",
-    "description": "Arrow Function Inline",
+    "description": "Create inline arrow function (single expression)",
     "body": ["const ${1:functionName} = (${2:params}) => $0;"]
   },
   "Async Arrow Function": {
     "prefix": "aaf",
-    "description": "Async Arrow Function",
+    "description": "Create async arrow function for asynchronous operations",
     "body": ["const ${1:functionName} = async (${2:params}) => {", "  $0", "};"]
   },
 
   // ES6+ Variables
-  "Const Declaration": {
+  "Const Variable Declaration": {
     "prefix": "co",
-    "description": "Const Declaration",
+    "description": "Declare a constant variable (immutable reference)",
     "body": ["const ${1:name} = $0;"]
   },
-  "Let Declaration": {
+  "Let Variable Declaration": {
     "prefix": "le",
-    "description": "Let Declaration",
+    "description": "Declare a block-scoped variable (mutable)",
     "body": ["let ${1:name} = $0;"]
   },
 
   // Destructuring
-  "Destructure Object": {
+  "Object Destructuring": {
     "prefix": "dob",
-    "description": "Destructure Object",
+    "description": "Extract properties from object using destructuring",
     "body": ["const { ${1:property} } = ${2:object};"]
   },
-  "Destructure Array": {
+  "Array Destructuring": {
     "prefix": "dar",
-    "description": "Destructure Array",
+    "description": "Extract elements from array using destructuring",
     "body": ["const [${1:element}] = ${2:array};"]
   },
-  "Destructure with Rest": {
+  "Object Destructuring with Rest": {
     "prefix": "drest",
-    "description": "Destructure with Rest Operator",
+    "description": "Destructure object with rest operator (...)",
     "body": ["const { ${1:first}, ...${2:rest} } = ${3:object};"]
   },
 
   // Template Literals
-  "Template Literal": {
+  "Template Literal String": {
     "prefix": "tl",
-    "description": "Template Literal",
+    "description": "Create template literal with embedded expressions",
     "body": ["`${1:string} \\${${2:expression}} ${3:string}`$0"]
   },
 
   // Promises and Async/Await
-  "Promise": {
+  "Promise Constructor": {
     "prefix": "prom",
-    "description": "Promise",
+    "description": "Create new Promise with resolve/reject handlers",
     "body": ["new Promise((resolve, reject) => {", "  $0", "});"]
   },
-  "Async Function": {
+  "Async Function Declaration": {
     "prefix": "asf",
-    "description": "Async Function",
+    "description": "Create async function for asynchronous operations",
     "body": ["async function ${1:functionName}(${2:params}) {", "  $0", "}"]
   },
-  "Try Catch Async": {
+  "Try-Catch Block": {
     "prefix": "trycatch",
-    "description": "Try Catch for Async",
+    "description": "Try-catch block for error handling (async/await ready)",
     "body": [
       "try {",
       "  ${1:code}",
@@ -77,19 +77,19 @@
   },
 
   // Array Methods
-  "Array Map": {
+  "Array Map Method": {
     "prefix": "map",
-    "description": "Array Map Method",
+    "description": "Transform array elements using map method",
     "body": ["${1:array}.map((${2:item}) => ${3:item})"]
   },
-  "Array Filter": {
+  "Array Filter Method": {
     "prefix": "filter",
-    "description": "Array Filter Method",
+    "description": "Filter array elements based on condition",
     "body": ["${1:array}.filter((${2:item}) => ${3:condition})"]
   },
-  "Array Reduce": {
+  "Array Reduce Method": {
     "prefix": "reduce",
-    "description": "Array Reduce Method",
+    "description": "Reduce array to single value using accumulator",
     "body": [
       "${1:array}.reduce((${2:acc}, ${3:item}) => {",
       "  $0",
@@ -97,104 +97,104 @@
       "}, ${4:initialValue})"
     ]
   },
-  "Array Find": {
+  "Array Find Method": {
     "prefix": "find",
-    "description": "Array Find Method",
+    "description": "Find first array element matching condition",
     "body": ["${1:array}.find((${2:item}) => ${3:condition})"]
   },
-  "Array ForEach": {
+  "Array ForEach Method": {
     "prefix": "foreach",
-    "description": "Array ForEach Method",
+    "description": "Execute function for each array element",
     "body": ["${1:array}.forEach((${2:item}) => {", "  $0", "});"]
   },
 
   // Object Methods
-  "Object Keys": {
+  "Object Keys Array": {
     "prefix": "okeys",
-    "description": "Object.keys()",
+    "description": "Get array of object's property names",
     "body": ["Object.keys(${1:object})"]
   },
-  "Object Values": {
+  "Object Values Array": {
     "prefix": "ovalues",
-    "description": "Object.values()",
+    "description": "Get array of object's property values",
     "body": ["Object.values(${1:object})"]
   },
-  "Object Entries": {
+  "Object Entries Array": {
     "prefix": "oentries",
-    "description": "Object.entries()",
+    "description": "Get array of object's [key, value] pairs",
     "body": ["Object.entries(${1:object})"]
   },
 
   // Import/Export
-  "Import Default": {
+  "Import Default Export": {
     "prefix": "imp",
-    "description": "Import Default",
+    "description": "Import default export from module",
     "body": ["import ${1:name} from '${2:module}';"]
   },
-  "Import Named": {
+  "Import Named Exports": {
     "prefix": "imn",
-    "description": "Import Named",
+    "description": "Import specific named exports from module",
     "body": ["import { ${1:name} } from '${2:module}';"]
   },
-  "Import All": {
+  "Import All as Namespace": {
     "prefix": "ima",
-    "description": "Import All as",
+    "description": "Import all exports as namespace object",
     "body": ["import * as ${1:name} from '${2:module}';"]
   },
-  "Export Default": {
+  "Export Default Value": {
     "prefix": "exp",
-    "description": "Export Default",
+    "description": "Export value as default export",
     "body": ["export default ${1:name};"]
   },
-  "Export Named": {
+  "Export Named Values": {
     "prefix": "exn",
-    "description": "Export Named",
+    "description": "Export specific named values from module",
     "body": ["export { ${1:name} };"]
   },
 
   // Console
-  "Console Log": {
+  "Console Log Output": {
     "prefix": "cl",
-    "description": "Console Log",
+    "description": "Log values to browser console",
     "body": ["console.log($0);"]
   },
-  "Console Warn": {
+  "Console Warning": {
     "prefix": "cw",
-    "description": "Console Warn",
+    "description": "Display warning message in console",
     "body": ["console.warn($0);"]
   },
-  "Console Error": {
+  "Console Error Message": {
     "prefix": "ce",
-    "description": "Console Error",
+    "description": "Display error message in console",
     "body": ["console.error($0);"]
   },
-  "Console Table": {
+  "Console Table Display": {
     "prefix": "ctable",
-    "description": "Console Table",
+    "description": "Display data in table format in console",
     "body": ["console.table($0);"]
   },
-  "Console Clear": {
+  "Console Clear Screen": {
     "prefix": "cclear",
-    "description": "Console Clear",
+    "description": "Clear all console output",
     "body": ["console.clear();"]
   },
-  "Console Assert": {
+  "Console Assert Condition": {
     "prefix": "cassert",
-    "description": "Console Assert",
+    "description": "Assert condition and log error if false",
     "body": ["console.assert(${1:condition}, '${2:message}');"]
   },
-  "Console Time": {
+  "Console Time Measurement": {
     "prefix": "ctime",
-    "description": "Console Time",
+    "description": "Measure execution time between start and end",
     "body": [
       "console.time('${1:label}');",
       "$0",
       "console.timeEnd('${1:label}');"
     ]
   },
-  "Console Group": {
+  "Console Group Collapsible": {
     "prefix": "cgroup",
-    "description": "Console Group",
+    "description": "Create collapsible group of console logs",
     "body": ["console.group('${1:label}');", "$0", "console.groupEnd();"]
   }
 }

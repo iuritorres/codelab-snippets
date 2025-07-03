@@ -1,8 +1,8 @@
 {
-  // Base Snippets
-  "Initial CSS Boilerplate": {
+  // Base & Reset Snippets
+  "CSS Complete Reset & Boilerplate": {
     "prefix": "!",
-    "description": "Initial CSS Boilerplate",
+    "description": "Complete CSS reset with modern boilerplate (box-sizing, REM system, viewport optimization)",
     "body": [
       "* {",
       "  box-sizing: border-box;",
@@ -29,9 +29,9 @@
       "}"
     ]
   },
-  "Reset Default Sizing Settings": {
+  "CSS Reset - Box Model & Spacing": {
     "prefix": "reset:sizing",
-    "description": "Reset Default Sizing Settings",
+    "description": "Reset margin, padding, outline and set box-sizing to border-box for all elements",
     "body": [
       "* {",
       "  box-sizing: border-box;",
@@ -41,9 +41,9 @@
       "}"
     ]
   },
-  "Reset Default Font Settings": {
+  "CSS Reset - Typography & REM System": {
     "prefix": "reset:font",
-    "description": "Reset Default Font Settings",
+    "description": "Setup REM system (62.5% base) with optimized font rendering and 1.6rem body font",
     "body": [
       "html {",
       "  font-size: 62.5%;",
@@ -60,21 +60,21 @@
       "}"
     ]
   },
-  "Shadow Effect": {
+  "Box Shadow - Subtle Drop Shadow": {
     "prefix": "shadow",
-    "description": "Add Shadow Effect",
+    "description": "Add subtle box shadow with customizable values (default: soft gray shadow)",
     "body": ["box-shadow: ${1:0 2px 4px rgba(0, 0, 0, 0.1)};"]
   },
-  "Rounded": {
+  "Border Radius - Fully Rounded": {
     "prefix": "rounded",
-    "description": "Add Rounded Corners",
+    "description": "Create perfectly rounded corners (999px radius for pills/buttons)",
     "body": ["border-radius: 999px;"]
   },
 
-  // Flexbox Snippets
-  "Create Flex Container": {
+  // Flexbox Layout Snippets
+  "Flexbox - Complete Container Setup": {
     "prefix": "flex-container",
-    "description": "Create Flex Container",
+    "description": "Create complete flex container with all properties (direction, justify, align, gap)",
     "body": [
       ".${1:container} {",
       "  display: flex;",
@@ -85,93 +85,93 @@
       "}"
     ]
   },
-  "Flex": {
+  "Flexbox - Display Flex": {
     "prefix": "flex",
-    "description": "Add Flex Property",
+    "description": "Set element to flex display (enables flexbox layout)",
     "body": ["display: flex;"]
   },
-  "Align Items": {
+  "Flexbox - Align Items (Cross Axis)": {
     "prefix": "align",
-    "description": "Align Items",
+    "description": "Control cross-axis alignment of flex items (vertical in row layout)",
     "body": [
       "align-items: ${1|stretch,flex-start,flex-end,center,basis,start,end|};"
     ]
   },
-  "Justify Content": {
+  "Flexbox - Justify Content (Main Axis)": {
     "prefix": "justify",
-    "description": "Justify Content",
+    "description": "Control main-axis alignment of flex items (horizontal in row layout)",
     "body": [
       "justify-content: ${1|flex-start,flex-end,center,space-between,space-around,space-evenly|};"
     ]
   },
-  "Flex Direction": {
+  "Flexbox - Direction Control": {
     "prefix": "direction",
-    "description": "Flex Direction",
+    "description": "Set the main axis direction of flex container (row, column, reverse)",
     "body": [
       "flex-direction: ${1|row,column,row-reverse,column-reverse,wrap,wrap-reverse|};"
     ]
   },
-  "Wrap Flex Items": {
+  "Flexbox - Enable Wrapping": {
     "prefix": "wrap",
-    "description": "Wrap Flex Items",
+    "description": "Allow flex items to wrap to new lines when space is insufficient",
     "body": ["flex-wrap: wrap;"]
   },
-  "No Wrap Flex Items": {
+  "Flexbox - Disable Wrapping": {
     "prefix": "nowrap",
-    "description": "No Wrap Flex Items",
+    "description": "Prevent flex items from wrapping (force single line layout)",
     "body": ["flex-wrap: nowrap;"]
   },
-  "Wrap Reverse Flex Items": {
+  "Flexbox - Reverse Wrapping": {
     "prefix": "wrap-reverse",
-    "description": "Wrap Reverse Flex Items",
+    "description": "Wrap flex items in reverse order (bottom to top)",
     "body": ["flex-wrap: wrap-reverse;"]
   },
 
-  // Media Queries
-  "Media Query Max Width": {
+  // Responsive Media Queries
+  "Media Query - Maximum Width Breakpoint": {
     "prefix": "media-max",
-    "description": "Media Query Max Width",
+    "description": "Media query for maximum screen width (mobile-first approach)",
     "body": ["@media (max-width: ${1:768px}) {", "  ${0}", "}"]
   },
-  "Media Query Min Width": {
+  "Media Query - Minimum Width Breakpoint": {
     "prefix": "media-min",
-    "description": "Media Query Min Width",
+    "description": "Media query for minimum screen width (desktop-first approach)",
     "body": ["@media (min-width: ${1:768px}) {", "  ${0}", "}"]
   },
-  "Media Query Mobile": {
+  "Responsive - Mobile Devices": {
     "prefix": "media-mobile",
-    "description": "Media Query for Mobile Devices",
+    "description": "Target mobile devices (up to 768px width)",
     "body": ["@media (max-width: 768px) {", "  ${0}", "}"]
   },
-  "Media Query Tablet": {
+  "Responsive - Tablet Devices": {
     "prefix": "media-tablet",
-    "description": "Media Query for Tablet Devices",
+    "description": "Target tablet devices (769px to 1024px width)",
     "body": [
       "@media (min-width: 769px) and (max-width: 1024px) {",
       "  ${0}",
       "}"
     ]
   },
-  "Media Query Desktop": {
+  "Responsive - Desktop Devices": {
     "prefix": "media-desktop",
-    "description": "Media Query for Desktop Devices",
+    "description": "Target desktop devices (1025px and above width)",
     "body": ["@media (min-width: 1025px) {", "  ${0}", "}"]
   },
-  "Media Query Landscape": {
+  "Orientation - Landscape Mode": {
     "prefix": "media-landscape",
-    "description": "Media Query for Landscape Orientation",
+    "description": "Target devices in landscape orientation (width > height)",
     "body": ["@media (orientation: landscape) {", "  ${0}", "}"]
   },
-  "Media Query Portrait": {
+  "Orientation - Portrait Mode": {
     "prefix": "media-portrait",
-    "description": "Media Query for Portrait Orientation",
+    "description": "Target devices in portrait orientation (height > width)",
     "body": ["@media (orientation: portrait) {", "  ${0}", "}"]
   },
 
-  // Animation Snippets
-  "Keyframes Animation": {
+  // CSS Animations & Transitions
+  "Animation - Custom Keyframes": {
     "prefix": "keyframes",
-    "description": "Define Keyframes Animation",
+    "description": "Create custom keyframes animation with from/to states (define your own animation)",
     "body": [
       "@keyframes ${1:animation-name} {",
       "  from {",
@@ -183,43 +183,43 @@
       "}"
     ]
   },
-  "Animation Property": {
+  "Animation - Complete Property": {
     "prefix": "animation",
-    "description": "Add Animation Property",
+    "description": "Add complete animation property with all parameters (name, duration, easing, etc.)",
     "body": [
       "animation: ${1:animation-name} ${2:duration} ${3:easing} ${4:delay} ${5:iteration-count} ${6:direction};"
     ]
   },
-  "Transition Property": {
+  "Transition - Custom Property": {
     "prefix": "transition",
-    "description": "Add Transition Property",
+    "description": "Add smooth transition for specific CSS property with timing control",
     "body": ["transition: ${1:property} ${2:duration} ${3:easing} ${4:delay};"]
   },
-  "Transition All": {
+  "Transition - All Properties": {
     "prefix": "transition-all",
-    "description": "Add Transition for All Properties",
+    "description": "Add transition for all animatable properties (convenient but less performant)",
     "body": ["transition: all ${1:duration} ${2:easing};"]
   },
-  "Transition 150ms": {
+  "Transition - Quick (150ms)": {
     "prefix": "transition:150",
-    "description": "Add Transition with 150ms Duration",
+    "description": "Fast transition for hover effects and micro-interactions (150ms duration)",
     "body": ["transition: all 150ms ease-in-out;"]
   },
-  "Transition 300ms": {
+  "Transition - Standard (300ms)": {
     "prefix": "transition:300",
-    "description": "Add Transition with 300ms Duration",
+    "description": "Standard transition for UI interactions and state changes (300ms duration)",
     "body": ["transition: all 300ms ease-in-out;"]
   },
-  "Transition 500ms": {
+  "Transition - Slow (500ms)": {
     "prefix": "transition:500",
-    "description": "Add Transition with 500ms Duration",
+    "description": "Slow transition for dramatic effects and emphasis (500ms duration)",
     "body": ["transition: all 500ms ease-in-out;"]
   },
 
-  // Pre Configured Animations
-  "Pulse": {
+  // Pre-Built Animation Effects
+  "Animation - Pulse Effect": {
     "prefix": "animate:pulse",
-    "description": "Pulse Animation",
+    "description": "Breathing pulse effect - perfect for call-to-action buttons and attention-grabbing",
     "body": [
       "@keyframes pulse {",
       "  0%, 100% {",
@@ -235,9 +235,9 @@
       "}"
     ]
   },
-  "Fade In": {
+  "Animation - Fade In": {
     "prefix": "animate:fade-in",
-    "description": "Fade In Animation",
+    "description": "Smooth fade in effect for revealing content and page transitions",
     "body": [
       "@keyframes fadeIn {",
       "  from {",
@@ -253,9 +253,9 @@
       "}"
     ]
   },
-  "Fade Out": {
+  "Animation - Fade Out": {
     "prefix": "animate:fade-out",
-    "description": "Fade Out Animation",
+    "description": "Smooth fade out effect for hiding content and element removal",
     "body": [
       "@keyframes fadeOut {",
       "  from {",
@@ -271,9 +271,9 @@
       "}"
     ]
   },
-  "Slide In": {
+  "Animation - Slide In": {
     "prefix": "animate:slide-in",
-    "description": "Slide In Animation",
+    "description": "Slide in from left with fade - great for mobile menus and sidebar navigation",
     "body": [
       "@keyframes slideIn {",
       "  from {",
@@ -291,9 +291,9 @@
       "}"
     ]
   },
-  "Bounce": {
+  "Animation - Bounce Effect": {
     "prefix": "animate:bounce",
-    "description": "Bounce Animation",
+    "description": "Playful bounce effect - ideal for notifications and success messages",
     "body": [
       "@keyframes bounce {",
       "  0%, 20%, 50%, 80%, 100% {",
@@ -312,9 +312,9 @@
       "}"
     ]
   },
-  "Shake": {
+  "Animation - Shake Effect": {
     "prefix": "animate:shake",
-    "description": "Shake Animation",
+    "description": "Attention-grabbing shake effect for error states and form validation",
     "body": [
       "@keyframes shake {",
       "  0% {",
@@ -339,9 +339,9 @@
       "}"
     ]
   },
-  "Spin": {
+  "Animation - Spin Rotation": {
     "prefix": "animate:spin",
-    "description": "Spin Animation",
+    "description": "Continuous rotation animation - perfect for loading spinners and icons",
     "body": [
       "@keyframes spin {",
       "  from {",
@@ -357,9 +357,9 @@
       "}"
     ]
   },
-  "Zoom In": {
+  "Animation - Zoom In": {
     "prefix": "animate:zoom-in",
-    "description": "Zoom In Animation",
+    "description": "Scale up with fade in - great for modal appearances and image previews",
     "body": [
       "@keyframes zoomIn {",
       "  from {",
@@ -377,9 +377,9 @@
       "}"
     ]
   },
-  "Zoom Out": {
+  "Zoom Out Animation": {
     "prefix": "animate:zoom-out",
-    "description": "Zoom Out Animation",
+    "description": "Scale down with fade out - perfect for modal exits",
     "body": [
       "@keyframes zoomOut {",
       "  from {",
@@ -397,9 +397,9 @@
       "}"
     ]
   },
-  "Flip": {
+  "Flip Animation": {
     "prefix": "animate:flip",
-    "description": "Flip Animation",
+    "description": "3D flip effect on Y-axis - cool for card reveals",
     "body": [
       "@keyframes flip {",
       "  from {",

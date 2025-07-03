@@ -1,22 +1,22 @@
 {
-  "Main Boilerplate": {
+  "Main Script Boilerplate": {
     "prefix": "main",
     "body": ["if __name__ == '__main__':", "    ${0}", ""],
-    "description": "Main boilerplate for Python scripts"
+    "description": "Create main script entry point for Python executable scripts"
   },
-  "Import Default": {
+  "Import Specific Items": {
     "prefix": "imp",
-    "description": "Import Default",
+    "description": "Import specific functions, classes or variables from module",
     "body": ["from ${1:module} import ${2:name}"]
   },
-  "Import All": {
+  "Import Module with Alias": {
     "prefix": "ima",
-    "description": "Import All as",
+    "description": "Import entire module with custom alias name",
     "body": ["import ${1:module} as ${2:name}"]
   },
-  "Decorator Method": {
+  "Function Decorator Pattern": {
     "prefix": "decorator",
-    "description": "Decorator Method",
+    "description": "Create decorator function with wrapper pattern",
     "body": [
       "def ${1:decorator_name}(func):",
       "    def wrapper(${2:*args}, ${3:**kwargs}):",
@@ -31,73 +31,73 @@
   },
 
   // Dictionary Methods (equivalent to Object methods)
-  "Dictionary Keys": {
+  "Dictionary Keys Access": {
     "prefix": "dkeys",
-    "description": "dict.keys()",
+    "description": "Get dictionary keys view object (equivalent to Object.keys)",
     "body": ["${1:dictionary}.keys()"]
   },
-  "Dictionary Values": {
+  "Dictionary Values Access": {
     "prefix": "dvalues",
-    "description": "dict.values()",
+    "description": "Get dictionary values view object (equivalent to Object.values)",
     "body": ["${1:dictionary}.values()"]
   },
-  "Dictionary Items": {
+  "Dictionary Items Access": {
     "prefix": "ditems",
-    "description": "dict.items()",
+    "description": "Get dictionary key-value pairs (equivalent to Object.entries)",
     "body": ["${1:dictionary}.items()"]
   },
-  "List Dictionary Keys": {
+  "List of Dictionary Keys": {
     "prefix": "lkeys",
-    "description": "List of dictionary keys",
+    "description": "Convert dictionary keys to list for iteration",
     "body": ["list(${1:dictionary}.keys())"]
   },
-  "List Dictionary Values": {
+  "List of Dictionary Values": {
     "prefix": "lvalues",
-    "description": "List of dictionary values",
+    "description": "Convert dictionary values to list for iteration",
     "body": ["list(${1:dictionary}.values())"]
   },
-  "List Dictionary Items": {
+  "List of Dictionary Items": {
     "prefix": "litems",
-    "description": "List of dictionary items",
+    "description": "Convert dictionary items to list of tuples",
     "body": ["list(${1:dictionary}.items())"]
   },
 
   // Array/List Methods
   "List Comprehension": {
     "prefix": "lc",
-    "description": "List Comprehension",
+    "description": "Create new list by transforming elements with expression",
     "body": ["[${1:expression} for ${2:item} in ${3:iterable}]"]
   },
-  "List Comprehension with Condition": {
+  "List Comprehension with Filter": {
     "prefix": "lcif",
-    "description": "List Comprehension with Condition",
+    "description": "Create filtered list with condition using comprehension",
     "body": [
       "[${1:expression} for ${2:item} in ${3:iterable} if ${4:condition}]"
     ]
   },
-  "Map Function": {
+  "Map Function Application": {
     "prefix": "map",
-    "description": "Map function",
+    "description": "Apply function to all items in iterable (equivalent to JS map)",
     "body": ["list(map(${1:function}, ${2:iterable}))"]
   },
-  "Filter Function": {
+  "Filter Function Application": {
     "prefix": "filter",
-    "description": "Filter function",
+    "description": "Filter items from iterable based on condition function",
     "body": ["list(filter(${1:function}, ${2:iterable}))"]
   },
-  "Lambda Map": {
+  "Lambda with Map": {
     "prefix": "lmap",
-    "description": "Lambda with Map",
+    "description": "Apply lambda function to all items using map",
     "body": ["list(map(lambda ${1:x}: ${2:expression}, ${3:iterable}))"]
   },
-  "Lambda Filter": {
+  "Lambda with Filter": {
     "prefix": "lfilter",
-    "description": "Lambda with Filter",
+    "description": "Filter items using lambda condition function",
     "body": ["list(filter(lambda ${1:x}: ${2:condition}, ${3:iterable}))"]
   },
-  "Reduce Function": {
+  "Reduce Function (functools)": {
     "prefix": "reduce",
-    "description": "Reduce function (functools)",
+    "description": "Reduce iterable to single value using accumulator function",
     "body": [
       "from functools import reduce",
       "",
@@ -105,101 +105,101 @@
       "reduce(lambda ${1:acc}, ${2:item}: ${3:expression}, ${4:iterable})"
     ]
   },
-  "List Sort": {
+  "Sort List In-Place": {
     "prefix": "sort",
-    "description": "Sort list",
+    "description": "Sort list in-place using key function",
     "body": ["${1:list}.sort(key=lambda ${2:x}: ${3:x})"]
   },
-  "Sorted Function": {
+  "Create Sorted List": {
     "prefix": "sorted",
-    "description": "Sorted function",
+    "description": "Create new sorted list from iterable using key function",
     "body": ["sorted(${1:iterable}, key=lambda ${2:x}: ${3:x})"]
   },
-  "For Loop": {
+  "For Loop Iteration": {
     "prefix": "forin",
-    "description": "For Loop",
+    "description": "Iterate over items in iterable collection",
     "body": ["for ${1:item} in ${2:iterable}:", "    $0"]
   },
-  "For Loop With Enumarate": {
+  "For Loop with Index (Enumerate)": {
     "prefix": "forenum",
-    "description": "Enumerate",
+    "description": "Iterate with both index and value using enumerate",
     "body": [
       "for ${1:index}, ${2:value} in enumerate(${3:iterable}):",
       "    $0"
     ]
   },
-  "For Loope With Zip Function": {
+  "For Loop with Multiple Iterables (Zip)": {
     "prefix": "forzip",
-    "description": "Zip function",
+    "description": "Iterate over multiple iterables simultaneously with zip",
     "body": [
       "for ${1:item1}, ${2:item2} in zip(${3:iterable1}, ${4:iterable2}):",
       "    $0"
     ]
   },
-  "For Loop With Range Function": {
+  "For Loop with Range": {
     "prefix": "forrange",
-    "description": "Range function",
+    "description": "Iterate over numeric range with start, end, and step",
     "body": ["for ${1:i} in range(${2:start}, ${3:end}, ${4:step}):", "    $0"]
   },
-  "Any Function": {
+  "Any Function Check": {
     "prefix": "any",
-    "description": "Any function",
+    "description": "Check if any element in iterable satisfies condition",
     "body": ["any(${1:condition} for ${2:item} in ${3:iterable})"]
   },
-  "All Function": {
+  "All Function Check": {
     "prefix": "all",
-    "description": "All function",
+    "description": "Check if all elements in iterable satisfy condition",
     "body": ["all(${1:condition} for ${2:item} in ${3:iterable})"]
   },
-  "List Append": {
+  "List Append Item": {
     "prefix": "append",
-    "description": "List append",
+    "description": "Add single item to end of list",
     "body": ["${1:list}.append(${2:item})"]
   },
-  "List Extend": {
+  "List Extend with Iterable": {
     "prefix": "extend",
-    "description": "List extend",
+    "description": "Add all items from iterable to end of list",
     "body": ["${1:list}.extend(${2:iterable})"]
   },
-  "List Remove": {
+  "List Remove Item": {
     "prefix": "remove",
-    "description": "List remove",
+    "description": "Remove first occurrence of item from list",
     "body": ["${1:list}.remove(${2:item})"]
   },
-  "List Pop": {
+  "List Pop Item": {
     "prefix": "pop",
-    "description": "List pop",
+    "description": "Remove and return item at index (default: last item)",
     "body": ["${1:list}.pop(${2:index})"]
   },
-  "List Index": {
+  "List Find Index": {
     "prefix": "index",
-    "description": "List index",
+    "description": "Find index of first occurrence of item in list",
     "body": ["${1:list}.index(${2:item})"]
   },
-  "List Count": {
+  "List Count Occurrences": {
     "prefix": "count",
-    "description": "List count",
+    "description": "Count number of occurrences of item in list",
     "body": ["${1:list}.count(${2:item})"]
   },
 
   // Dictionary Comprehension
   "Dictionary Comprehension": {
     "prefix": "dc",
-    "description": "Dictionary Comprehension",
+    "description": "Create dictionary using comprehension with key-value pairs",
     "body": ["{${1:key}: ${2:value} for ${3:item} in ${4:iterable}}"]
   },
-  "Dictionary Comprehension with Condition": {
+  "Dictionary Comprehension with Filter": {
     "prefix": "dcif",
-    "description": "Dictionary Comprehension with Condition",
+    "description": "Create filtered dictionary using comprehension with condition",
     "body": [
       "{${1:key}: ${2:value} for ${3:item} in ${4:iterable} if ${5:condition}}"
     ]
   },
 
   // Class and Method Definitions
-  "Class Definition": {
+  "Class Definition Template": {
     "prefix": "class",
-    "description": "Class Definition",
+    "description": "Create Python class with constructor method",
     "isFileTemplate": true,
     "body": [
       "class ${1/(.*)/${1:/capitalize}/}:",
@@ -211,7 +211,7 @@
   },
   "Data Class Definition": {
     "prefix": "dataclass",
-    "description": "Data Class Definition",
+    "description": "Create data class with automatic method generation",
     "isFileTemplate": true,
     "body": [
       "from dataclasses import dataclass",
@@ -224,9 +224,9 @@
       "    ${0}"
     ]
   },
-  "Constructor Method": {
+  "Constructor Method (__init__)": {
     "prefix": "init",
-    "description": "Constructor Method",
+    "description": "Create class constructor/initializer method",
     "body": [
       "def __init__(self, ${1:args}) -> None:",
       "    ${2:pass}",
@@ -234,9 +234,9 @@
       "${0}"
     ]
   },
-  "String Representation Method": {
+  "String Representation (__str__)": {
     "prefix": "str",
-    "description": "String Representation Method",
+    "description": "Create human-readable string representation method",
     "body": [
       "def __str__(self) -> str:",
       "    return f\"${1/(.*)/${1:/capitalize}/}(${2:attributes})\"",
@@ -244,9 +244,9 @@
       "${0}"
     ]
   },
-  "Static Method": {
+  "Static Method Declaration": {
     "prefix": "staticmethod",
-    "description": "Static Method",
+    "description": "Create static method (no self or cls parameter)",
     "body": [
       "@staticmethod",
       "def ${1:method_name}(${2:args}):",
@@ -255,9 +255,9 @@
       "${0}"
     ]
   },
-  "Class Method": {
+  "Class Method Declaration": {
     "prefix": "classmethod",
-    "description": "Class Method",
+    "description": "Create class method with cls parameter",
     "body": [
       "@classmethod",
       "def ${1:method_name}(cls, ${2:args}):",
@@ -266,9 +266,9 @@
       "${0}"
     ]
   },
-  "Property Method": {
+  "Property with Getter/Setter": {
     "prefix": "property",
-    "description": "Property Method",
+    "description": "Create property with getter and setter methods",
     "body": [
       "@property",
       "def ${1:property_name}(self) -> ${2:type}:",
@@ -283,9 +283,9 @@
   },
 
   // Request and Response Handling
-  "HTTP Request": {
+  "HTTP Request Template": {
     "prefix": "httprequest",
-    "description": "HTTP Request",
+    "description": "Create HTTP request with response handling and error checking",
     "body": [
       "import requests",
       "",
@@ -307,9 +307,9 @@
   },
 
   // Exception Handling
-  "Exception Handling": {
+  "Try-Except Block": {
     "prefix": "tryexcept",
-    "description": "Try Except Block",
+    "description": "Handle exceptions with try-except block",
     "body": [
       "try:",
       "    ${1:code}",
@@ -321,9 +321,9 @@
   },
 
   // Python Utils
-  "Terminal Colors Utility": {
+  "Terminal Colors Utility Module": {
     "prefix": "utils:terminalcolors",
-    "description": "Complete terminal color utilities module",
+    "description": "Complete terminal color utilities module with ANSI codes and helper functions",
     "isFileTemplate": true,
     "body": [
       "\"\"\"",

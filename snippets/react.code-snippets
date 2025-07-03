@@ -1,8 +1,8 @@
 {
   // React Function Components
-  "React Function Component": {
+  "Function Component (Basic)": {
     "prefix": "rfc",
-    "description": "React Function Component without Export",
+    "description": "Create basic React function component (not exported)",
     "body": [
       "function ${1:ComponentName} () {",
       "  return (",
@@ -11,9 +11,9 @@
       "};"
     ]
   },
-  "Export React Function Component": {
+  "Function Component (Exported)": {
     "prefix": "erfc",
-    "description": "Export React Function Component",
+    "description": "Create exported React function component",
     "body": [
       "export function ${1:ComponentName} () {",
       "  return (",
@@ -22,9 +22,9 @@
       "};"
     ]
   },
-  "Export Default React Function Component": {
+  "Function Component (Default Export)": {
     "prefix": "edrfc",
-    "description": "Export Default React Function Component",
+    "description": "Create React function component with default export",
     "body": [
       "function ${1:ComponentName} () {",
       "  return (",
@@ -37,9 +37,9 @@
   },
 
   // React Arrow Function Components
-  "rafc": {
+  "Arrow Component (Basic)": {
     "prefix": "rafc",
-    "description": "React Arrow Function Component without Export",
+    "description": "Create basic React arrow function component (not exported)",
     "body": [
       "const ${1:ComponentName} = () => {",
       "  return (",
@@ -48,9 +48,9 @@
       "};"
     ]
   },
-  "Export React Arrow Function Component": {
+  "Arrow Component (Exported)": {
     "prefix": "erafc",
-    "description": "Export React Arrow Function Component",
+    "description": "Create exported React arrow function component",
     "body": [
       "export const ${1:ComponentName} = () => {",
       "  return (",
@@ -59,9 +59,9 @@
       "};"
     ]
   },
-  "Export Default React Arrow Function Component": {
+  "Arrow Component (Default Export)": {
     "prefix": "edrafc",
-    "description": "Export Default React Arrow Function Component",
+    "description": "Create React arrow function component with default export",
     "body": [
       "const ${1:ComponentName} = () => {",
       "  return (",
@@ -74,9 +74,9 @@
   },
 
   // React Components with Props
-  "React Function Component with Props": {
+  "Function Component with Props": {
     "prefix": "rfcp",
-    "description": "React Function Component with Props Interface",
+    "description": "Create React function component with TypeScript props interface",
     "body": [
       "interface ${1:ComponentName}Props {",
       "  ",
@@ -89,9 +89,9 @@
       "};"
     ]
   },
-  "Export React Function Component with Props": {
+  "Function Component with Props (Exported)": {
     "prefix": "erfcp",
-    "description": "Export React Function Component with Props Interface",
+    "description": "Create exported React function component with TypeScript props",
     "body": [
       "interface ${1:ComponentName}Props {",
       "  ",
@@ -104,9 +104,9 @@
       "};"
     ]
   },
-  "Export Default React Function Component with Props": {
+  "Function Component with Props (Default Export)": {
     "prefix": "edrfcp",
-    "description": "Export Default React Function Component with Props Interface",
+    "description": "Create React function component with props and default export",
     "body": [
       "interface ${1:ComponentName}Props {",
       "  ",
@@ -121,9 +121,9 @@
       "export default ${1:ComponentName};"
     ]
   },
-  "React Arrow Function Component with Props": {
+  "Arrow Component with Props": {
     "prefix": "rafcp",
-    "description": "React Arrow Function Component with Props Interface",
+    "description": "Create React arrow function component with TypeScript props",
     "body": [
       "interface ${1:ComponentName}Props {",
       "  ",
@@ -136,9 +136,9 @@
       "};"
     ]
   },
-  "Export React Arrow Function Component with Props": {
+  "Arrow Component with Props (Exported)": {
     "prefix": "erafcp",
-    "description": "Export React Arrow Function Component with Props Interface",
+    "description": "Create exported React arrow component with TypeScript props",
     "body": [
       "interface ${1:ComponentName}Props {",
       "  ",
@@ -151,9 +151,9 @@
       "};"
     ]
   },
-  "Export Default React Arrow Function Component with Props": {
+  "Arrow Component with Props (Default Export)": {
     "prefix": "edrafcp",
-    "description": "Export Default React Arrow Function Component with Props Interface",
+    "description": "Create React arrow component with props and default export",
     "body": [
       "interface ${1:ComponentName}Props {",
       "  ",
@@ -170,9 +170,9 @@
   },
 
   // Concise React Components with Props
-  "Function Component with Props (Concise)": {
+  "Component with Props (Concise Function)": {
     "prefix": "rcp",
-    "description": "React Component with Props (Concise)",
+    "description": "Create concise React component with pre-filled props",
     "body": [
       "interface ${1:Component}Props {",
       "  ${2:prop}: ${3:string};",
@@ -185,9 +185,9 @@
       "};"
     ]
   },
-  "Arrow Component with Props (Concise)": {
+  "Component with Props (Concise Arrow)": {
     "prefix": "racp",
-    "description": "React Arrow Component with Props (Concise)",
+    "description": "Create concise React arrow component with inline JSX",
     "body": [
       "interface ${1:Component}Props {",
       "  ${2:prop}: ${3:string};",
@@ -196,9 +196,9 @@
       "const ${1:Component} = (props: ${1:Component}Props) => <${4:div}>$0</${4:div}>;"
     ]
   },
-  "Export Component with Props (Concise)": {
+  "Component with Props (Concise Exported)": {
     "prefix": "ercp",
-    "description": "Export React Component with Props (Concise)",
+    "description": "Create concise exported React component with destructured props",
     "body": [
       "interface ${1:Component}Props {",
       "  ${2:prop}: ${3:string};",
@@ -211,19 +211,19 @@
   },
 
   // Quick Props Interface
-  "Props Interface": {
+  "Props Interface Definition": {
     "prefix": "iprops",
-    "description": "Props Interface Definition",
+    "description": "Create TypeScript interface for component props",
     "body": ["interface ${1:ComponentName}Props {", "  $0", "}"]
   },
-  "Type Props": {
+  "Props Type Definition": {
     "prefix": "tprops",
-    "description": "Type definition for Props",
+    "description": "Create TypeScript type alias for component props",
     "body": ["type ${1:ComponentName}Props = {", "  $0", "};"]
   },
   "Inline Props Component": {
     "prefix": "ricp",
-    "description": "React Inline Component with Props",
+    "description": "Create React component with inline props type definition",
     "body": [
       "const ${1:Component} = ({ ${2:prop} }: { ${2:prop}: ${3:string} }) => <${4:div}>$0</${4:div}>;"
     ]
@@ -232,24 +232,24 @@
   // React Hooks
   "useState Hook": {
     "prefix": "state",
-    "description": "useState Hook",
+    "description": "Create state variable with setter using useState hook",
     "body": [
       "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialValue});"
     ]
   },
   "useEffect Hook": {
     "prefix": "effect",
-    "description": "useEffect Hook",
+    "description": "Create effect hook that runs once on component mount",
     "body": ["useEffect(() => {", "  $0", "}, []);"]
   },
   "useEffect with Dependencies": {
     "prefix": "effectd",
-    "description": "useEffect Hook with Dependencies",
+    "description": "Create effect hook with dependency array",
     "body": ["useEffect(() => {", "  $0", "}, [${1:dependencies}]);"]
   },
   "useEffect with Cleanup": {
     "prefix": "effectc",
-    "description": "useEffect Hook with Cleanup",
+    "description": "Create effect hook with cleanup function for unmount",
     "body": [
       "useEffect(() => {",
       "  $0",
@@ -262,19 +262,19 @@
   },
   "useContext Hook": {
     "prefix": "context",
-    "description": "useContext Hook",
+    "description": "Access React context value using useContext hook",
     "body": ["const ${1:value} = useContext(${2:Context});"]
   },
   "useReducer Hook": {
     "prefix": "reducer",
-    "description": "useReducer Hook",
+    "description": "Create state management with reducer pattern",
     "body": [
       "const [${1:state}, ${2:dispatch}] = useReducer(${3:reducer}, ${4:initialState});"
     ]
   },
   "useMemo Hook": {
     "prefix": "memo",
-    "description": "useMemo Hook",
+    "description": "Memoize expensive computation with useMemo hook",
     "body": [
       "const ${1:memoizedValue} = useMemo(() => {",
       "  return ${2:computation};",
@@ -283,7 +283,7 @@
   },
   "useCallback Hook": {
     "prefix": "callback",
-    "description": "useCallback Hook",
+    "description": "Memoize function with useCallback hook",
     "body": [
       "const ${1:memoizedCallback} = useCallback(",
       "  (${2:params}) => {",
@@ -295,17 +295,17 @@
   },
   "useRef Hook": {
     "prefix": "ref",
-    "description": "useRef Hook",
+    "description": "Create mutable ref object with useRef hook",
     "body": ["const ${1:ref} = useRef${2:<${3:HTMLDivElement}>}(${4:null});"]
   },
   "useLayoutEffect Hook": {
     "prefix": "leffect",
-    "description": "useLayoutEffect Hook",
+    "description": "Create layout effect hook (runs synchronously after DOM mutations)",
     "body": ["useLayoutEffect(() => {", "  $0", "}, [${1:dependencies}]);"]
   },
   "useImperativeHandle Hook": {
     "prefix": "imperative",
-    "description": "useImperativeHandle Hook",
+    "description": "Customize instance value exposed by ref with useImperativeHandle",
     "body": [
       "useImperativeHandle(${1:ref}, () => ({",
       "  $0",
@@ -314,14 +314,14 @@
   },
   "useDebugValue Hook": {
     "prefix": "usedebug",
-    "description": "useDebugValue Hook",
+    "description": "Display label for custom hook in React DevTools",
     "body": ["useDebugValue(${1:value});"]
   },
 
   // Custom Hooks
-  "Custom Hook": {
+  "Custom Hook Template": {
     "prefix": "hook",
-    "description": "Custom Hook Template",
+    "description": "Create custom React hook with state and effect",
     "body": [
       "function use${1:CustomHook}(${2:params}) {",
       "  const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = useState(${4:initialValue});",
@@ -336,7 +336,7 @@
   },
   "Custom Hook with Return Object": {
     "prefix": "hookr",
-    "description": "Custom Hook with Return Object",
+    "description": "Create custom React hook with flexible return object",
     "body": [
       "function use${1:CustomHook}(${2:params}) {",
       "  $0",
@@ -351,14 +351,14 @@
   // Hook Patterns
   "useState with TypeScript": {
     "prefix": "statets",
-    "description": "useState with TypeScript Interface",
+    "description": "Create typed state with explicit TypeScript interface",
     "body": [
       "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:Type}>(${3:initialValue});"
     ]
   },
   "useEffect Async Pattern": {
     "prefix": "effecta",
-    "description": "useEffect with Async Function",
+    "description": "Create effect hook with async function and error handling",
     "body": [
       "useEffect(() => {",
       "  const ${1:fetchData} = async () => {",
@@ -373,9 +373,9 @@
       "}, [${2:dependencies}]);"
     ]
   },
-  "Form Hook Pattern": {
+  "Form State Management Hook": {
     "prefix": "formhook",
-    "description": "Form Hook Pattern",
+    "description": "Create form state hook with input change handler",
     "body": [
       "const [${1:formData}, set${1/(.*)/${1:/capitalize}/}] = useState({",
       "  ${2:field}: '${3:value}',",
