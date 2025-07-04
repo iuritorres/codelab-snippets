@@ -125,6 +125,18 @@
     "body": ["Object.entries(${1:object})"]
   },
 
+  // JSON Operations
+  "JSON Stringify Formatted": {
+    "prefix": "stringify",
+    "description": "Convert object to formatted JSON string with 2-space indentation",
+    "body": ["JSON.stringify(${1:object}, null, 2)"]
+  },
+  "JSON Parse": {
+    "prefix": "parse",
+    "description": "Parse JSON string into JavaScript object",
+    "body": ["JSON.parse(${1:jsonString})"]
+  },
+
   // Import/Export
   "Import Default Export": {
     "prefix": "imp",

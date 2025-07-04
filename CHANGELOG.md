@@ -17,6 +17,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Selenium snippets support
 - Kotlin snippets support
 
+## [0.1.1] - 2025-07-03 - "🔧 JSON Operations & HTML Integration"
+
+### Added
+
+- **🔧 JSON Operations** - Essential JSON manipulation snippets
+  - `stringify` - JSON.stringify with formatted output (2-space indentation)
+  - `parse` - JSON.parse for converting JSON strings to objects
+- **🌐 Enhanced HTML Support** - JavaScript and CSS snippets now available in HTML files
+  - CSS snippets work directly in HTML for rapid styling
+  - JavaScript ES6+ snippets available in HTML script blocks
+
+### Improved
+
+- **📈 Better Developer Experience** - Faster JSON debugging and formatting
+- **🎯 Cross-Language Integration** - Seamless workflow between HTML, CSS, and JavaScript
+
 ## [0.1.0] - 2025-07-02 - "📝 Markdown Documentation Revolution"
 
 ### Added

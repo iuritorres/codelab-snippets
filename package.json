@@ -2,7 +2,7 @@
   "name": "codelab-snippets",
   "displayName": "codelab snippets",
   "description": "✨ Handy code snippets for fast and efficient development - React, TypeScript, Python, CSS animations, and Notion-style Markdown documentation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "publisher": "codelab",
   "license": "MIT",
@@ -59,6 +59,18 @@
   },
   "contributes": {
     "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/javascript-es6.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/css.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.code-snippets"
+      },
       {
         "language": "javascript",
         "path": "./snippets/javascript-es6.code-snippets"

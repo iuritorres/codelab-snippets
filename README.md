@@ -23,10 +23,11 @@ This extension provides a wide range of snippets for multiple languages that hel
 
 - **⚛️ React Components** - Function/Arrow components with TypeScript support
 - **🪝 React Hooks** - useState, useEffect, custom hooks, and advanced patterns
-- **🔧 JavaScript ES6+** - Modern syntax, async/await, destructuring, modules
+- **🔧 JavaScript ES6+** - Modern syntax, async/await, destructuring, modules, JSON operations
 - **🐍 Python Utilities** - Classes, loops, comprehensions, HTTP requests, decorators
 - **🎨 CSS Animations** - Professional animation library with ready-to-use effects
 - **📝 Markdown Documentation** - Notion/Confluence-style slash commands for professional docs
+- **🌐 HTML Integration** - JavaScript and CSS snippets work seamlessly in HTML files
 
 ### React Function Components
 
@@ -143,6 +144,13 @@ This extension provides a wide range of snippets for multiple languages that hel
 | ------ | --------------- |
 | `prom` | Promise         |
 | `tca`  | Try Catch Async |
+
+### JSON Operations
+
+| Prefix      | Description                                                                                   |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| `stringify` | JSON Stringify Formatted - _Convert object to formatted JSON string with 2-space indentation_ |
+| `parse`     | JSON Parse - _Parse JSON string into JavaScript object_                                       |
 
 ### Console & Debugging
 
@@ -321,7 +329,8 @@ Ready-to-use professional animations with keyframes and classes. Just add the cl
 ## 📋 Requirements
 
 - VS Code 1.101.0 or higher
-- Works with JavaScript, TypeScript, JSX, TSX, Python, CSS, SCSS, and PostCSS files
+- Works with HTML, JavaScript, TypeScript, JSX, TSX, Python, CSS, SCSS, PostCSS, and Markdown files
+- HTML files support both CSS and JavaScript ES6+ snippets for seamless development
 
 ## ⚙️ Extension Settings
 
@@ -457,7 +466,23 @@ Discussion notes and meeting highlights
 Follow-up actions and next meeting scheduling
 ```
 
-### 📚 Markdown API Documentation
+### � JSON Operations (Fast Debugging!)
+
+Type `stringify` and press Tab:
+
+```javascript
+JSON.stringify(object, null, 2);
+// Perfect for debugging - formatted with 2-space indentation
+```
+
+Type `parse` and press Tab:
+
+```javascript
+JSON.parse(jsonString);
+// Convert JSON string back to JavaScript object
+```
+
+### �📚 Markdown API Documentation
 
 Type `/api` and press Tab:
 
@@ -578,30 +603,27 @@ No known issues at this time. Please report any problems on the GitHub repositor
 
 For detailed release notes and changelog, see [CHANGELOG.md](./CHANGELOG.md).
 
-### Latest Release - 0.0.9
+### Latest Release - 0.1.1
 
-✨ **Enhanced UX & Clarity Improvements** - Major snippet experience overhaul:
+🔧 **JSON Operations & HTML Integration** - Enhanced development workflow:
 
-- **🎨 Complete CSS Snippets Collection** - Professional styling toolkit with game-changing features
-- **🎬 Animation Library (`animate:...`)** - **REVOLUTIONARY** ready-to-use professional animations:
-  - Pulse, fade, slide, bounce, shake, spin, zoom, and flip effects
-  - Each snippet includes both keyframes and CSS class - just add to HTML!
-  - Perfect for modern web apps, CTAs, modals, and interactive components
-- **Modern CSS Foundation** - Complete reset, flexbox system, and utility classes
-- **Complete snippet clarity redesign** with intuitive titles and helpful descriptions
-- **Educational approach** - learn while coding with contextual explanations
-- **Improved discoverability** through clearer, more descriptive snippet names
-- **Consistent UX patterns** across React, Python, JavaScript ES6+, and CSS snippets
-- **Better IntelliSense experience** with purpose-driven descriptions
+- **🔧 JSON Operations** - Essential JSON manipulation snippets for faster debugging
+  - `stringify` - Formatted JSON.stringify with 2-space indentation for readable output
+  - `parse` - Quick JSON.parse for converting strings to objects
+- **🌐 Enhanced HTML Support** - JavaScript and CSS snippets now work directly in HTML files
+  - Seamless CSS styling within HTML documents
+  - JavaScript ES6+ snippets available in HTML script blocks
+  - Improved cross-language development workflow
 
-### Previous Release - 0.0.8
+### Previous Release - 0.1.0
 
-🐍 **Python Power & Enhanced Tooling** - Complete Python support with:
+� **Markdown Documentation Revolution** - Complete Notion/Confluence-style documentation:
 
-- Complete Python snippets collection (dictionary operations, list methods, classes, utilities)
-- Smart auto-capitalization for Python class names
-- Terminal Colors Utility and enhanced build tooling
-- Cross-language consistency between Python and JavaScript snippets
+- **📝 Complete Markdown Snippets Collection** with intuitive `/command` syntax
+- **Professional Templates** for meetings, projects, and API documentation
+- **Notion-Style Callouts** for highlighted content (`/info`, `/warning`, `/error`, etc.)
+- **Rich Content Blocks** for tables, code blocks, media integration
+- **Semantic Organization** with TOC, headers, lists, and toggle sections
 
 ---
 
