@@ -17,6 +17,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Selenium snippets support
 - Kotlin snippets support
 
+## [0.1.2] - 2025-07-04 - "🌐 HTML Metatags & SEO Enhancement"
+
+### Added
+
+- **🌐 HTML Metatags Collection** - Professional HTML metadata management
+  - `metatags:seo` - Complete SEO optimization with Open Graph support
+  - `metatags:robots` - Search engine indexing control (robots, googlebot)
+  - `metatags:viewport` - Responsive design viewport configuration
+  - `metatags:charset` - Character encoding declaration (UTF-8)
+  - `metatags:favicon` - Website favicon integration
+
+### Improved
+
+- **📈 Better SEO Workflow** - Faster HTML document setup with professional metadata
+- **🎯 Web Standards Compliance** - Proper HTML document structure and meta information
+
 ## [0.1.1] - 2025-07-03 - "🔧 JSON Operations & HTML Integration"
 
 ### Added

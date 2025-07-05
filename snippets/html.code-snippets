@@ -1,0 +1,45 @@
+{
+  // Metatags
+  "SEO Metatags": {
+    "prefix": "metatags:seo",
+    "description": "Insert SEO metatags for better search engine optimization.",
+    "body": [
+      "<meta name=\"description\" content=\"${1:Your page description here}\">",
+      "<meta name=\"keywords\" content=\"${2:keyword1, keyword2, keyword3}\">",
+      "<meta name=\"author\" content=\"${3:Your Name}\">",
+      "<meta property=\"og:title\" content=\"${4:Page Title}\">",
+      "<meta property=\"og:description\" content=\"${5:Description for social media}\">",
+      "<meta property=\"og:image\" content=\"${6:image-url.jpg}\">",
+      "<meta property=\"og:url\" content=\"${7:url-of-the-page}\">"
+    ]
+  },
+  "Robots Metatags": {
+    "prefix": "metatags:robots",
+    "description": "Insert robots metatags to control indexing and following.",
+    "body": [
+      "<meta name=\"robots\" content=\"${1:index, follow}\">",
+      "<meta name=\"robots\" content=\"${3:noindex, nofollow}\">",
+      "<meta name=\"googlebot\" content=\"${2:index, follow}\">"
+    ]
+  },
+  "Viewport Metatag": {
+    "prefix": "metatags:viewport",
+    "description": "Insert viewport metatag for responsive design.",
+    "body": [
+      "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+    ]
+  },
+  "Charset Metatag": {
+    "prefix": "metatags:charset",
+    "description": "Insert charset metatag for character encoding.",
+    "body": ["<meta charset=\"UTF-8\">"]
+  },
+  "Favicon Metatag": {
+    "prefix": "metatags:favicon",
+    "description": "Insert favicon metatag to link to the website's favicon.",
+    "body": [
+      "<link rel=\"icon\" href=\"${1:/path/to/favicon.ico}\" type=\"image/x-icon\">",
+      "<link rel=\"shortcut icon\" href=\"${2:/path/to/favicon.ico}\" type=\"image/x-icon\">"
+    ]
+  }
+}

@@ -1,7 +1,5 @@
 # ✨ Codelab Snippets
 
-Handy code snippets for fast and efficient development. Boost your productivity with a comprehensive collection of React components, hooks, JavaScript ES6+, Python utilities, and professional CSS animations.
-
 ## 💡 Philosophy
 
 Our snippets are designed to be **intuitive and conversational** - you type what you want, almost like speaking your intention. With our latest UX improvements, every snippet now has clear, descriptive titles and helpful explanations:
@@ -24,6 +22,7 @@ This extension provides a wide range of snippets for multiple languages that hel
 - **⚛️ React Components** - Function/Arrow components with TypeScript support
 - **🪝 React Hooks** - useState, useEffect, custom hooks, and advanced patterns
 - **🔧 JavaScript ES6+** - Modern syntax, async/await, destructuring, modules, JSON operations
+- **🌐 HTML Snippets** - Professional metatags, SEO optimization, and document structure
 - **🐍 Python Utilities** - Classes, loops, comprehensions, HTTP requests, decorators
 - **🎨 CSS Animations** - Professional animation library with ready-to-use effects
 - **📝 Markdown Documentation** - Notion/Confluence-style slash commands for professional docs
@@ -173,6 +172,18 @@ This extension provides a wide range of snippets for multiple languages that hel
 | `okeys`    | Object.keys()    |
 | `ovalues`  | Object.values()  |
 | `oentries` | Object.entries() |
+
+## 🌐 HTML Snippets
+
+### Metatags & SEO
+
+| Prefix              | Description                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------- |
+| `metatags:seo`      | SEO Metatags - _Complete SEO optimization with Open Graph support for better search rankings_ |
+| `metatags:robots`   | Robots Metatags - _Control search engine indexing and crawling behavior_                      |
+| `metatags:viewport` | Viewport Metatag - _Responsive design viewport configuration for mobile optimization_         |
+| `metatags:charset`  | Charset Metatag - _UTF-8 character encoding declaration for proper text rendering_            |
+| `metatags:favicon`  | Favicon Metatag - _Website favicon integration for browser tabs and bookmarks_                |
 
 ## 🐍 Python Snippets
 
@@ -594,6 +605,10 @@ body {
 - **CSS Reset & Boilerplate** - Type `!` for complete modern CSS foundation
 - **Flexbox made easy** - Complete container setup with property selection
 - **Transition presets** - Quick, Standard, and Slow durations for consistent timing
+- **HTML Metatags (`metatags:...`)** - Professional SEO and document structure:
+  - Use `metatags:seo` for complete Open Graph and SEO optimization
+  - `metatags:viewport` ensures mobile-responsive design
+  - All metatag snippets follow web standards and best practices
 
 ## 🐛 Known Issues
 
@@ -602,28 +617,6 @@ No known issues at this time. Please report any problems on the GitHub repositor
 ## 📝 Release Notes
 
 For detailed release notes and changelog, see [CHANGELOG.md](./CHANGELOG.md).
-
-### Latest Release - 0.1.1
-
-🔧 **JSON Operations & HTML Integration** - Enhanced development workflow:
-
-- **🔧 JSON Operations** - Essential JSON manipulation snippets for faster debugging
-  - `stringify` - Formatted JSON.stringify with 2-space indentation for readable output
-  - `parse` - Quick JSON.parse for converting strings to objects
-- **🌐 Enhanced HTML Support** - JavaScript and CSS snippets now work directly in HTML files
-  - Seamless CSS styling within HTML documents
-  - JavaScript ES6+ snippets available in HTML script blocks
-  - Improved cross-language development workflow
-
-### Previous Release - 0.1.0
-
-� **Markdown Documentation Revolution** - Complete Notion/Confluence-style documentation:
-
-- **📝 Complete Markdown Snippets Collection** with intuitive `/command` syntax
-- **Professional Templates** for meetings, projects, and API documentation
-- **Notion-Style Callouts** for highlighted content (`/info`, `/warning`, `/error`, etc.)
-- **Rich Content Blocks** for tables, code blocks, media integration
-- **Semantic Organization** with TOC, headers, lists, and toggle sections
 
 ---
 
